@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nordic Thread</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive design -->
+    <!-- Favicon links -->
+    <!--<link rel="icon" href="favicon2.ico" type="image/x-icon">-->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+    <link rel="stylesheet" href="index.css">
+    <script src="fadeScroll.js" defer></script>
+    <script src="scrollToTop.js" defer></script>
+    <script src="logoColorChange.js" defer></script>
+    <script src="overlayDropdown.js" defer></script>
+    <script src="translations.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="fixedHeader fade-header">
+        <ul>
+            <li class="dropdownProdukter">
+                <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
+                    style="background:none; border:none; cursor:pointer;">
+                    PRODUKTER
+                </button>
+
+                <div class="dropdown-fullwidth-wrapper">
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-content">
+                        <a href="bluser.html">BLUSER</a>
+                        <a href="skjerf.html">SKJERF</a>
+                        <a href="secondthread.html">SECOND THREAD</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <a href="index.html" class="headerTitle" id="mainPageBtn" title="Gå til forsiden">
+                    <span id="logoText">Nordic Thread</span>
+                </a>
+            </li>
+
+            <li>
+                <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
+                    EN
+                </button>
+                <a href="omOss.html" class="headerText" id="omOssTekst">OM OSS</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="whiteStripeBackground"></div> <!-- Hvit bakgrunn navigasjonsbar -->
+
+    <section class="page" id="mainPage">
+        <div class="whiteStripeBackground"></div>
+        <div class="pictureCoverScreen">
+            <img src="/images/forsideBluse.png" class="klessnor" alt="Klessnor">
+            <div class="tekstBilde">
+                <h3>NORSK HÅNDVERK, TIDLØST DESIGN</h3>
+                <p>
+                    Våre bluser og skjerf er skapt med omtanke – sydd i Norge, av både nye og gjenbrukte materialer.
+                    <br>
+                    Inspirert av bunadstradisjon og skandinavisk enkelhet, forenes tidløst design med ekte håndverk.
+                    <br>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="page produktSide" id="produktSection">
+        <div class="whiteStripeBackground"></div>
+
+        <div class="ProdukterBilder">
+            <div class="produkt">
+                <a href="bluser.html" data-translate="bluserLink">
+                    <img data-translate="altBluser" id="imgBluser" src="/images/bluseRosaBlomst.png" alt="Bluser">
+                    <p id="txtBluser" class="bildeTekst">BLUSER</p>
+                </a>
+            </div>
+            <div class="produkt">
+                <a href="skjerf.html" data-translate="skjerfLink">
+                    <img data-translate="altSkjerf" id="imgSkjerf" src="images/skjerf.png" alt="Skjerf">
+                    <p id="txtSkjerf" class="bildeTekst">SKJERF</p>
+                </a>
+            </div>
+            <div class="produkt">
+                <a href="secondthread.html" data-translate="secondThreadLink">
+                    <img data-translate="altSecondThread" id="imgSecondThread" src="/images/STbluse.png"
+                        alt="Second Thread">
+                    <p id="txtSecondThread" class="bildeTekst">SECOND THREAD</p>
+                </a>
+            </div>
+        </div>
+        <div class="whiteStripeBottom"></div>
+    </section>
+
+
+    <section class="page">
+        <div class="carousel-containerInstagram" id="instagramSection">
+            <div class="carouselInstagram">
+                <img src="/images/selfieRosaSTbluse.png" width="300vw" height="400vh" class="carousel-image active"
+                    alt="Image 1">
+                <img src="/images/STbluseSloyfe.png" width="300vw" height="400vh" class="carousel-image" alt="Image 2">
+                <img src="/images/champagneSTbluse.png" width="300vw" height="400vh" class="carousel-image"
+                    alt="Image 3">
+            </div>
+            <p><a id="instagramLenke" href="https://www.instagram.com/nordicthread.co" target="_blank"
+                    rel="noopener noreferrer">Følg oss på Instagram!</a></p>
+        </div>
+    </section>
+
+    <section class="page sisteSide">
+        <footer id="footerProdukter" style="text-align:center; padding:20px; font-family:sans-serif;">
+            <div style="margin-top:10px; display:flex; justify-content:center; gap:20px; align-items:center;">
+                <!-- E-post ikon -->
+                <a href="mailto:nordicthread@outlook.com"
+                    style="text-decoration:none; color:#627D98; display:flex; align-items:center; gap:5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.708 2.825L15 12.383V5.383zM14.8 13H1.2l4.708-2.825L8 10.117l2.092-1.942L14.8 13zM1 12.383l4.708-2.175L1 5.383v7z" />
+                    </svg>
+                    nordicthread@outlook.com
+                </a>
+
+                <!-- Instagram ikon -->
+                <a href="https://www.instagram.com/nordicthread.co" target="_blank"
+                    style="text-decoration:none; color:#627D98; display:flex; align-items:center; gap:5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.244 0 4.977.003 4.224.05c-.75.047-1.262.201-1.71.428a3.381 3.381 0 0 0-1.233.806A3.381 3.381 0 0 0 .05 2.711c-.227.448-.381.96-.428 1.71C-.003 5.977 0 6.244 0 8c0 1.756.003 2.023.05 2.776.047.75.201 1.262.428 1.71a3.381 3.381 0 0 0 .806 1.233 3.381 3.381 0 0 0 1.233.806c.448.227.96.381 1.71.428C5.977 16.003 6.244 16 8 16c1.756 0 2.023.003 2.776-.05.75-.047 1.262-.201 1.71-.428a3.381 3.381 0 0 0 1.233-.806 3.381 3.381 0 0 0 .806-1.233c.227-.448.381-.96.428-1.71C16.003 10.023 16 9.756 16 8c0-1.756-.003-2.023-.05-2.776-.047-.75-.201-1.262-.428-1.71a3.381 3.381 0 0 0-.806-1.233 3.381 3.381 0 0 0-1.233-.806c-.448-.227-.96-.381-1.71-.428C10.023.003 9.756 0 8 0zM8 1.44c1.732 0 1.94.007 2.623.038.675.031 1.043.144 1.287.24.322.124.552.274.794.516.242.242.392.472.516.794.096.244.209.612.24 1.287.031.683.038.891.038 2.623s-.007 1.94-.038 2.623c-.031.675-.144 1.043-.24 1.287a2.11 2.11 0 0 1-.516.794 2.11 2.11 0 0 1-.794.516c-.244.096-.612.209-1.287.24-.683.031-.891.038-2.623.038s-1.94-.007-2.623-.038c-.675-.031-1.043-.144-1.287-.24a2.11 2.11 0 0 1-.794-.516 2.11 2.11 0 0 1-.516-.794c-.096-.244-.209-.612-.24-1.287C1.447 9.94 1.44 9.732 1.44 8s.007-1.94.038-2.623c.031-.675.144-1.043.24-1.287a2.11 2.11 0 0 1 .516-.794 2.11 2.11 0 0 1 .794-.516c.244-.096.612-.209 1.287-.24C6.06 1.447 6.268 1.44 8 1.44zM8 3.88a4.12 4.12 0 1 0 0 8.24 4.12 4.12 0 0 0 0-8.24zm0 6.76a2.64 2.64 0 1 1 0-5.28 2.64 2.64 0 0 1 0 5.28zm4.406-6.906a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z" />
+                    </svg>
+                    Instagram
+                </a>
+            </div>
+        </footer>
+    </section>
+
+    <!-- For å scrolle ned til produkter fra andre .html-filer -->
+    <script>
+        window.addEventListener('load', () => {
+            const params = new URLSearchParams(window.location.search);
+            const scrollTo = params.get('scroll');
+            if (scrollTo) {
+                const element = document.getElementById(scrollTo);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Default language
+            let lang = localStorage.getItem("lang") || "no";
+
+            const langBtn = document.getElementById("langBtn");
+
+            // Function to update all text
+            function updateLanguage() {
+                // Dropdown meny
+                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
+                document.querySelector(".dropdown-content a[href='bluser.html']").textContent = translations[lang].bluser;
+                document.querySelector(".dropdown-content a[href='skjerf.html']").textContent = translations[lang].skjerf;
+                document.querySelector(".dropdown-content a[href='secondthread.html']").textContent = translations[lang].secondThread;
+
+                // Andre tekster
+                document.getElementById("omOssTekst").textContent = translations[lang].omOss;
+                document.getElementById("logoText").textContent = translations[lang].logoText;
+                document.getElementById("instagramLenke").textContent = translations[lang].followInstagram;
+
+                // Hero section
+                document.querySelector(".tekstBilde h3").innerHTML = translations[lang].heroTitle;
+                document.querySelector(".tekstBilde p").innerHTML = translations[lang].heroText;
+
+                // Homepage title attribute
+                document.getElementById("mainPageBtn").title = translations[lang].homepageTitle;
+
+                // Produktbilder - alt og tekst under
+                document.getElementById("imgBluser").alt = translations[lang].altBluser;
+                document.getElementById("txtBluser").textContent = translations[lang].altBluser;
+
+                document.getElementById("imgSkjerf").alt = translations[lang].altSkjerf;
+                document.getElementById("txtSkjerf").textContent = translations[lang].altSkjerf;
+
+                document.getElementById("imgSecondThread").alt = translations[lang].altSecondThread;
+                document.getElementById("txtSecondThread").textContent = translations[lang].altSecondThread;
+
+                // Carousel images
+                const carouselImages = document.querySelectorAll(".carousel-image");
+                if (carouselImages.length >= 3) {
+                    carouselImages[0].alt = translations[lang].altCarousel1;
+                    carouselImages[1].alt = translations[lang].altCarousel2;
+                    carouselImages[2].alt = translations[lang].altCarousel3;
+                }
+
+                // Language toggle button
+                const langBtn = document.getElementById("langBtn");
+                langBtn.textContent = lang === "no" ? "EN" : "NO";
+            }
+
+            // Switch language on button click
+            langBtn.addEventListener("click", () => {
+                lang = lang === "no" ? "en" : "no";
+                localStorage.setItem("lang", lang); // remember choice
+                updateLanguage();
+            });
+
+            // Initialize text
+            updateLanguage();
+        });
+
+
+    </script>
+</body>
+
+</html>

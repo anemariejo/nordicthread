@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "nordicthread",
+			"path": "."
+		},
+		{
+			"name": "Lexend_Tera",
+			"path": "../Downloads/Lexend_Tera"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nordicthread"
+	}
+}

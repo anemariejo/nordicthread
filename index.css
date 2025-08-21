@@ -1,0 +1,655 @@
+/* ------------------------------------------- */
+/* =============== FONTS ===================== */
+/* ------------------------------------------- */
+@font-face {
+  font-family: 'NordicThreadFont';
+  src: url('./Fonts/static/static/Inter_18pt-ExtraLight.ttf') format('truetype');  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------------------- */
+/* =============== Overlay ======================= */
+/* ------------------------------------------- */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* mørk halvtransparent svart */
+  z-index: 900; /* må være under dropdown som har z-index 1000 */
+  display: none; /* skjult som standard */
+}
+
+
+/* ------------------------------------------- */
+/* =============== BASE ======================= */
+/* ------------------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #ffffff;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ------------------------------------------- */
+/* =============== PAGE ======================= */
+/* ------------------------------------------- */
+.page {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.page.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ------------------------------------------- */
+/* =============== HEADER ===================== */
+/* ------------------------------------------- */
+.fixedHeader {
+  position: fixed;
+  padding-top: 10px;
+  margin-top: 4px;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  height: 10px;
+  background-color: white; /* optional */
+}
+
+.fixedHeader ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 2em;
+  list-style: none;
+  box-sizing: border-box;
+  position: relative; /* so we can absolutely center the logo */
+}
+
+.fixedHeader button.headerText {
+  background: none;
+  border: none;
+}
+
+
+.fixedHeader li {
+  display: flex;
+  align-items: center;
+}
+
+.fixedHeader li:first-child {
+  justify-content: flex-start;
+}
+
+.fixedHeader li:last-child {
+  justify-content: flex-end;
+}
+
+/* Center logo stays fixed in the middle */
+.fixedHeader li:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Buttons & text styles */
+#mainPageBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+#mainPageBtn:hover {
+  cursor: pointer;
+}
+
+.headerText {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+}
+
+.headerTitle {
+  font-family: 'NordicThreadFont', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  white-space: nowrap; /* prevent logo text from wrapping */
+}
+
+.headerTitle.white-logo {
+  color: white;
+}
+
+.fade-header {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.fade-header.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* ------------------------------------------- */
+/* =============== DROPDOWN =================== */
+/* ------------------------------------------- */
+/* Container for the dropdown trigger */
+.dropdownProdukter {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#produkterTekst { /* screen sizes */
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Full-width wrapper that appears on hover */
+.dropdown-fullwidth-wrapper {
+  position: fixed;
+  top: 35px; /* match your header height */
+  left: 0;
+  width: 100vw;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdownProdukter:hover .dropdown-fullwidth-wrapper {
+  display: block;
+}
+
+
+
+/* Actual dropdown menu styling */
+.dropdown-content {
+  background-color: white;
+  border: 1px solid rgb(159, 159, 159);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* center links horizontally */
+  flex-wrap: wrap; /* allow wrapping for tablet/mobile */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdownProdukter:hover .dropdown-content {
+  display: block;
+}
+
+/* Invisible hover bridge so you can move from the button to the menu */
+.dropdown-hover-area {
+  height: 10px; /* small invisible gap */
+  background: transparent;
+}
+
+#logoText, #produkterTekst, #omOssTekst, #stylingLogo {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+/* ------------------------------------------- */
+/* =============== COVER SECTION ============= */
+/* ------------------------------------------- */
+.whiteStripeBackground,
+.whiteStripeBottom { /* screen sizes */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  z-index: 5;
+}
+
+.whiteStripeBackground {
+  top: 0;
+}
+
+.whiteStripeBottom {
+  bottom: 0;
+}
+
+.pictureCoverScreen { /* screen sizes */
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 25px);
+  overflow: hidden;
+}
+
+.klessnor { /* screen sizes */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tekstBilde { /* screen sizes */
+  position: absolute;
+  top: 70%;
+  left: 2em;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+}
+
+.tekstBilde h3 { /* screen sizes */
+  margin-bottom: 0.2em;
+  font-size: 30px;
+  
+}
+
+.tekstBilde p { /* screen sizes */
+  font-size: 18px;
+  text-shadow: 1px 1px 2px #949494;
+}
+
+/* ------------------------------------------- */
+/* =============== PRODUKTER ================== */
+/* ------------------------------------------- */
+.ProdukterBilder { /* screen sizes */
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.produkt { /* screen sizes */
+  position: relative;
+  width: 35vw;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.produkt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produkt:hover img { /* screen sizes */
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.bildeTekst { /* screen sizes */
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  font-family: sans-serif;
+  font-size: 1.3em;
+  color: white;
+  text-shadow: 1px 1px 2px #949494;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.produkt:hover .bildeTekst {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* ------------------------------------------- */
+/* =============== CAROUSEL =================== */
+/* ------------------------------------------- */
+
+
+.image-carousel {
+  position: relative;
+  width: 100%;
+}
+
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 20px 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+/* ------------------------------------------- */
+/* =============== FOOTER ===================== */
+/* ------------------------------------------- */
+.sisteSide {
+  background: linear-gradient(to top, #a5b6c0, #ffffff);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+footer {
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+  font-family: sans-serif;
+}
+
+footer li {
+  padding: 0 3em;
+}
+
+/* Instagram-lenke */
+a {
+  color: inherit;
+}
+ /* Instagram link centered and spaced nicely */
+  #instagramLenke {
+    display: block;
+    margin-top: 1em;
+    font-size: 1.1em;
+    text-align: center;
+    color: #627D98; /* use your palette color */
+  }
+
+
+/* Mobile */
+@media (max-width: 767px) {
+  .fixedHeader ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* spread left, center, right */
+    padding: 0 1em;
+  }
+
+  .fixedHeader li {
+    flex: unset; /* remove equal stretching from desktop */
+    text-align: initial; /* remove forced centering */
+  }
+
+  .fixedHeader li:first-child {
+    margin-right: auto; /* push to far left */
+  }
+
+  .fixedHeader li:last-child {
+    margin-left: auto; /* push to far right */
+  }
+
+  /* Absolutely center the logo so left/right don't affect it */
+  .fixedHeader li:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ProdukterBilder {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    width: 100vw;           /* fill full screen width */
+    height: 80vh;          /* make entire section one viewport height */
+    margin: 0;
+    padding: 0;
+  }
+
+  .produkt {
+    flex: 1;                /* each takes equal space vertically */
+    height: 33.333vh;       /* each takes 1/3 of screen height */
+    width: 100%;            /* full width */
+    overflow: hidden;       /* prevent overflow */
+  }
+
+  .produkt img {
+    width: 100%;            /* full screen width */
+    height: 100%;           /* fill allocated height */
+    object-fit: cover;      /* cover area without distortion */
+    display: block;
+  }
+
+  .bildeTekst {
+    position: absolute;     /* overlay text on image if desired */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+  }
+  
+  /* Carousel container adjustments for mobile */
+  .carousel-containerInstagram {
+    display: flex;
+    flex-direction: column; /* stack items vertically if needed */
+    align-items: center;    /* center content horizontally */
+    width: 90vw;            /* container almost full width on mobile */
+    height: auto;           /* height adjusts based on content */
+    overflow: hidden;
+    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    padding-top: 20px;
+  }
+
+  .carouselInstagram {
+    display: flex;
+    flex-direction: row;    /* keep images horizontal carousel */
+    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    width: 100%;
+    padding-top: 30px;
+  }
+
+    /* Carousel container adjustments for mobile */
+  .carousel-container {
+    display: flex;
+    flex-direction: column; /* stack items vertically if needed */
+    align-items: center;    /* center content horizontally */
+    width: 90vw;            /* container almost full width on mobile */
+    height: auto;           /* height adjusts based on content */
+    overflow: hidden;
+    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    padding-top: 20px;
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: row;    /* keep images horizontal carousel */
+    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .carousel-image {
+    flex: 0 0 auto;         /* don't shrink, fixed width */
+    width: 60vw;            /* images fill most of viewport width */
+    height: auto;           /* keep aspect ratio */
+    object-fit: cover;
+    scroll-snap-align: start;
+    margin-right: 1em;      /* space between images */
+       /* optional: rounded corners */
+
+  }
+
+  /* Instagram link centered and spaced nicely */
+  #instagramLenke {
+    display: block;
+    margin-top: 1em;
+    font-size: 1.1em;
+    text-align: center;
+    color: #627D98; /* use your palette color */
+  }
+
+  .dropdown-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tablet */
+/* Tablet & små desktop */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Desktop */
+.product-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;       /* vertikal midt */
+    justify-content: center;   /* horisontal midt */
+    gap: 2rem;                 /* mellom bilde og tekst */
+    padding: 2rem 0;
+    flex-wrap: wrap;           /* gjør at det ikke knekker på mindre skjermer */
+}
+
+.product-image {
+    max-width: 700px;          /* maks bredde på bilde */
+    flex: 1 1 50%;             /* fleksibel, men maks 50% */
+    display: flex;
+    justify-content: center;   /* horisontal midt */
+    align-items: center;       /* vertikal midt */
+}
+
+.product-image img {
+    width: 100%;               /* fyll max-width */
+    height: auto;              /* behold proporsjoner */
+    display: block;
+}
+
+
+    .image-carousel img {
+        width: 100%;                 /* fyll container */
+        height: auto;                /* behold proporsjoner */
+        display: block;
+    }
+
+    .carousel-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none; /* lar knappene fortsatt være klikkbare selv om bildet skaleres */
+    }
+
+    .carousel-controls button {
+        pointer-events: auto; /* gjør knappene klikkbare */
+    }
+
+    .product-info {
+        width: 90%;                  /* litt smalere enn full bredde */
+        text-align: left;
+        margin-top: 1em;
+    }
+      /* Carousel container adjustments for mobile */
+  .carousel-containerInstagram {
+    display: flex;
+    flex-direction: column; /* stack items vertically if needed */
+    align-items: center;    /* center content horizontally */
+    width: 90vw;            /* container almost full width on mobile */
+    height: auto;           /* height adjusts based on content */
+    overflow: hidden;
+    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    padding-top: 20px;
+  }
+
+  .carouselInstagram {
+    display: flex;
+    flex-direction: row;    /* keep images horizontal carousel */
+    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    width: 100%;
+    padding-top: 30px;
+  }
+
+    /* Carousel container adjustments for mobile */
+  .carousel-container {
+    display: flex;
+    flex-direction: column; /* stack items vertically if needed */
+    align-items: center;    /* center content horizontally */
+    width: 70vw;            /* container almost full width on mobile */
+    height: auto;           /* height adjusts based on content */
+    overflow: hidden;
+    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    padding-top: 20px;
+  }
+    .carousel {
+    display: flex;
+    flex-direction: row;    /* keep images horizontal carousel */
+    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .carousel-image {
+    flex: 0 0 auto;         /* don't shrink, fixed width */
+    width: 40vw;            /* images fill most of viewport width */
+    height: auto;           /* keep aspect ratio */
+    object-fit: cover;
+    scroll-snap-align: start;
+    margin-right: 1em;      /* space between images */
+       /* optional: rounded corners */
+
+  }
+}
+
+
+/* ------------------------------------------- */
+/* =============== FARGEPALETT =============== */
+/* ------------------------------------------- */
+/* Fjellblå:      #627D98 */
+/* Tåkegrå:       #D8D8D8 */
+/* Dyp rødbrun:   #783F27 */
+/* Gyllen sand:   #D6B57F */
+/* Skoggrønn:     #2E4F3E */
