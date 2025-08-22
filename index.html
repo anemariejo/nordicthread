@@ -59,12 +59,14 @@
         </ul>
 
         <!-- Mobile menu overlay -->
+        <!-- Mobile menu overlay -->
         <div id="mobileMenu" class="mobile-menu">
             <div id="closeMenu">&times;</div>
-            <a href="index.html?scroll=produktSection">PRODUKTER</a>
+            <a href="index.html?scroll=produktSection" id="mobileProdukter">PRODUKTER</a>
             <a href="#" id="langMobileBtn">EN</a>
-            <a href="omOss.html">OM OSS</a>
+            <a href="omOss.html" id="mobileOmOss">OM OSS</a>
         </div>
+
     </header>
 
 
@@ -192,56 +194,55 @@
             const langMobileBtn = document.getElementById("langMobileBtn"); // mobil knapp
 
             function updateLanguage() {
-    // Dropdown meny (desktop)
-    document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
-    const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
-    if (bluserLink) bluserLink.textContent = translations[lang].bluser;
-    const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
-    if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
-    const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
-    if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
+                // Dropdown meny (desktop)
+                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
+                const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
+                if (bluserLink) bluserLink.textContent = translations[lang].bluser;
+                const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
+                if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+                const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
+                if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
-    // Andre tekster (desktop)
-    const omOssTekst = document.getElementById("omOssTekst");
-    if (omOssTekst) omOssTekst.innerHTML = translations[lang].omOssTekst;
-    document.getElementById("logoText").textContent = translations[lang].logoText;
-    document.getElementById("instagramLenke").textContent = translations[lang].followInstagram;
-    document.querySelector(".tekstBilde h3").innerHTML = translations[lang].heroTitle;
-    document.querySelector(".tekstBilde p").innerHTML = translations[lang].heroText;
-    document.getElementById("mainPageBtn").title = translations[lang].homepageTitle;
+                // Andre tekster (desktop)
+                const omOssTekst = document.getElementById("omOssTekst");
+                if (omOssTekst) omOssTekst.innerHTML = translations[lang].omOssTekst;
+                document.getElementById("logoText").textContent = translations[lang].logoText;
+                document.getElementById("instagramLenke").textContent = translations[lang].followInstagram;
+                document.querySelector(".tekstBilde h3").innerHTML = translations[lang].heroTitle;
+                document.querySelector(".tekstBilde p").innerHTML = translations[lang].heroText;
+                document.getElementById("mainPageBtn").title = translations[lang].homepageTitle;
 
-    // Produktbilder
-    document.getElementById("imgBluser").alt = translations[lang].altBluser;
-    document.getElementById("txtBluser").textContent = translations[lang].altBluser;
-    document.getElementById("imgSkjerf").alt = translations[lang].altSkjerf;
-    document.getElementById("txtSkjerf").textContent = translations[lang].altSkjerf;
-    document.getElementById("imgSecondThread").alt = translations[lang].altSecondThread;
-    document.getElementById("txtSecondThread").textContent = translations[lang].altSecondThread;
+                // Produktbilder
+                document.getElementById("imgBluser").alt = translations[lang].altBluser;
+                document.getElementById("txtBluser").textContent = translations[lang].altBluser;
+                document.getElementById("imgSkjerf").alt = translations[lang].altSkjerf;
+                document.getElementById("txtSkjerf").textContent = translations[lang].altSkjerf;
+                document.getElementById("imgSecondThread").alt = translations[lang].altSecondThread;
+                document.getElementById("txtSecondThread").textContent = translations[lang].altSecondThread;
 
-    // Om oss lenke (desktop)
-    document.getElementById("omOssHjorne").textContent = translations[lang].omOssLenke;
+                // Om oss lenke (desktop)
+                document.getElementById("omOssHjorne").textContent = translations[lang].omOssLenke;
 
-    // Carousel images alt
-    const carouselImages = document.querySelectorAll(".carousel-image");
-    if (carouselImages.length >= 3) {
-        carouselImages[0].alt = translations[lang].altCarousel1;
-        carouselImages[1].alt = translations[lang].altCarousel2;
-        carouselImages[2].alt = translations[lang].altCarousel3;
-    }
+                // Carousel images alt
+                const carouselImages = document.querySelectorAll(".carousel-image");
+                if (carouselImages.length >= 3) {
+                    carouselImages[0].alt = translations[lang].altCarousel1;
+                    carouselImages[1].alt = translations[lang].altCarousel2;
+                    carouselImages[2].alt = translations[lang].altCarousel3;
+                }
 
-    // Mobilmeny
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mobileProdukter = mobileMenu.querySelector("a[href='index.html?scroll=produktSection']");
-    const mobileOmOss = mobileMenu.querySelector("a[href='omOss.html']");
-    const mobileLangBtn = document.getElementById("langMobileBtn");
+                // Mobilmeny
+                const mobileProdukter = document.getElementById("mobileProdukter");
+                const mobileOmOss = document.getElementById("mobileOmOss");
+                const mobileLangBtn = document.getElementById("langMobileBtn");
 
-    if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
-    if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
-    if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
+                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
+                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
+                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
-    // Oppdater desktop språkknapp
-    if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
-}
+                // Oppdater desktop språkknapp
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
+            }
 
 
             // Event listeners for begge knapper
