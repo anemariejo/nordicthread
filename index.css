@@ -540,7 +540,7 @@ a {
   }
 
   .tekstBilde {
-    top: 20%; /* flyttet lenger opp */
+    top: 50%; /* flyttet lenger opp */
     left: 1em; /* juster gjerne litt inn fra venstre */
     font-size: 1em; /* kan justeres om teksten blir for stor */
   }
