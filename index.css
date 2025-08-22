@@ -427,7 +427,7 @@ a {
 
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 850px) {
   /* Skjul desktop-menyer */
     .dropdownProdukter,
     .rightMenu {
@@ -626,7 +626,7 @@ a {
 
 /* Tablet */
 /* Tablet & små desktop */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 850px) and (max-width: 1023px) {
     /* Desktop */
 .product-flex {
     display: flex;
