@@ -466,7 +466,7 @@ a {
     }
 
     .mobile-menu a {
-        font-size: 24px;
+        font-size: 24px; /* større tekst */
         margin: 1em 0;
         text-decoration: none;
         color: black;
@@ -513,6 +513,51 @@ a {
     margin: 0;
     padding: 0;
   }
+
+  /* Produkter vises en og en */
+    #produkterContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        padding: 1em;
+    }
+
+    .bluse {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bluse img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .bluse .bildetekst h2 {
+        font-size: 1.6em; /* større navn */
+        margin: 0.5em 0 0.2em;
+        text-align: center;
+    }
+
+    .bluse .bildetekst p {
+        font-size: 1.3em; /* større pris */
+        text-align: center;
+    }
+
+    /* TypeProdukt tekst større */
+    .typeProdukt h1 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    .typeProdukt p {
+        font-size: 1.2em;
+        text-align: center;
+    }
 
   .produkt {
     flex: 1;                /* each takes equal space vertically */
