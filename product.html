@@ -144,14 +144,15 @@
 
             const productId = getQueryParam("id");
 
-            fetch("products.json")
+            fetch("./data/products.json")
                 .then(response => response.json())
                 .then(products => {
                     const product = products.find(p => p.id === productId);
-                    window.currentProduct = product; // store globally
+                    window.currentProduct = product;
                     renderProduct(product, lang);
                 })
-                .catch(error => console.error(lang === "no" ? "Kunne ikke laste produkt:" : "Could not load product:", error));
+                .catch(error => console.error("Kunne ikke laste produkt:", error));
+
         });
     </script>
 
