@@ -217,7 +217,7 @@ body {
 @media (max-width: 1023px) {
 
     .produkter {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 50px;
         row-gap: 40px;
         padding-left: 10px;
@@ -260,11 +260,10 @@ body {
     }
 
     .produkter {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 0;
         row-gap: 30px;
         padding: 20px;
-
         justify-items: center;
         /* center the single-column items */
     }
@@ -298,18 +297,18 @@ body {
 
   /* TypeProdukt tekst større */
     .typeProdukt h1 {
-        font-size: 2em;
+        font-size: 4em;
         text-align: center;
         margin-bottom: 0.5em;
     }
 
     .typeProdukt p {
-        font-size: 1.2em;
+        font-size: 2em;
         text-align: center;
     }
 
     .bildetekst h2 {
-        font-size: 1.6em; /* større navn */
+        font-size: 4em; /* større navn */
         margin: 0.2em 0;
     }
 
@@ -320,7 +319,7 @@ body {
     }
 
     .bildetekst p {
-        font-size: 1.3em; /* større pris */
+        font-size: 2em; /* større pris */
         margin: 0;
     }
 
