@@ -23,37 +23,50 @@
 <body>
 
     <header class="fixedHeader fade-header">
-        <ul>
-            <li class="dropdownProdukter">
-                <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
-                    style="background:none; border:none; cursor:pointer;">
-                    PRODUKTER
-                </button>
-
-                <div class="dropdown-fullwidth-wrapper">
-                    <div class="dropdown-hover-area"></div>
-                    <div class="dropdown-content">
-                        <a href="bluser.html">BLUSER</a>
-                        <a href="skjerf.html">SKJERF</a>
-                        <a href="secondthread.html">SECOND THREAD</a>
-                    </div>
+    <ul>
+        <li class="dropdownProdukter">
+            <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
+                style="background:none; border:none; cursor:pointer;">
+                PRODUKTER
+            </button>
+            <div class="dropdown-fullwidth-wrapper">
+                <div class="dropdown-hover-area"></div>
+                <div class="dropdown-content">
+                    <a href="bluser.html">BLUSER</a>
+                    <a href="skjerf.html">SKJERF</a>
+                    <a href="secondthread.html">SECOND THREAD</a>
                 </div>
-            </li>
+            </div>
+        </li>
 
-            <li>
-                <a href="index.html" class="headerTitle" id="mainPageBtn" title="Gå til forsiden">
-                    <span id="logoText">Nordic Thread</span>
-                </a>
-            </li>
+        <li>
+            <a href="index.html" class="headerTitle" id="mainPageBtn" title="Gå til forsiden">
+                <span id="logoText">Nordic Thread</span>
+            </a>
+        </li>
 
-            <li>
-                <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
-                    EN
-                </button>
-                <a href="omOss.html" class="headerText" id="omOssTekst">OM OSS</a>
-            </li>
-        </ul>
-    </header>
+        <li class="rightMenu">
+            <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
+                EN
+            </button>
+            <a href="omOss.html" class="headerText" id="omOssHjorne">OM OSS</a>
+        </li>
+
+        <!-- Hamburger (for mobil) -->
+        <li class="hamburger">
+            <div id="hamburgerBtn">&#9776;</div>
+        </li>
+    </ul>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div id="closeMenu">&times;</div>
+        <a href="index.html?scroll=produktSection">PRODUKTER</a>
+        <a href="#" id="langMobileBtn">EN</a>
+        <a href="omOss.html">OM OSS</a>
+    </div>
+</header>
+
 
     <div class="whiteStripeBackground"></div> <!-- Hvit bakgrunn navigasjonsbar -->
 

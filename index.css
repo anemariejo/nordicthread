@@ -402,22 +402,22 @@ a {
   }
 
   /* Desktop: vis original menyer, skjul hamburger */
-.hamburger {
-    display: none;
-}
+.hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
 
-.rightMenu {
-    display: flex;
-    gap: 1em;
-    align-items: center;
-}
+    .dropdownProdukter,
+    .rightMenu {
+        display: flex !important;
+    }
 
-/* Center logo */
-.fixedHeader li:nth-child(2) {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+    /* Sikre at logo er midt */
+    .fixedHeader li:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
 
 /* Mobile */
@@ -447,7 +447,7 @@ a {
 
     /* Mobile menu overlay */
     .mobile-menu {
-        display: none;
+        display: none; /* starter skjult */
         position: fixed;
         top: 0;
         left: 0;
