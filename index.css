@@ -538,6 +538,20 @@ a {
     padding: 0.3em 0.6em;
     border-radius: 4px;
   }
+
+  .tekstBilde {
+    top: 20%; /* flyttet lenger opp */
+    left: 1em; /* juster gjerne litt inn fra venstre */
+    font-size: 1em; /* kan justeres om teksten blir for stor */
+  }
+
+  .tekstBilde h3 {
+    font-size: 24px; /* mindre overskrift på mobil */
+  }
+
+  .tekstBilde p {
+    font-size: 16px; /* mindre tekst på mobil */
+  }
   
   /* Carousel container adjustments for mobile */
   .carousel-containerInstagram {
