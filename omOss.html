@@ -15,7 +15,6 @@
                     style="background:none; border:none; cursor:pointer;">
                     PRODUKTER
                 </button>
-
                 <div class="dropdown-fullwidth-wrapper">
                     <div class="dropdown-hover-area"></div>
                     <div class="dropdown-content">
@@ -32,13 +31,28 @@
                 </a>
             </li>
 
-            <li>
+            <li class="rightMenu">
                 <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
                     EN
                 </button>
                 <a href="omOss.html" class="headerText" id="omOssHjorne">OM OSS</a>
             </li>
+
+            <!-- Hamburger (for mobil) -->
+            <li class="hamburger">
+                <div id="hamburgerBtn">&#9776;</div>
+            </li>
         </ul>
+
+        <!-- Mobile menu overlay -->
+        <!-- Mobile menu overlay -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div id="closeMenu">&times;</div>
+            <a href="index.html?scroll=produktSection" id="mobileProdukter">PRODUKTER</a>
+            <a href="#" id="langMobileBtn">EN</a>
+            <a href="omOss.html" id="mobileOmOss">OM OSS</a>
+        </div>
+
     </header>
 
 
@@ -90,42 +104,84 @@
 
     <script src="translations.js"></script>
     <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.style.display = 'flex';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+
+    </script>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Default language
             let lang = localStorage.getItem("lang") || "no";
 
             const langBtn = document.getElementById("langBtn");
+            const langMobileBtn = document.getElementById("langMobileBtn"); // mobil knapp
 
-            // Function to update all text
             function updateLanguage() {
-                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
+                // Dropdown meny (desktop)
+                const dropdownBtn = document.querySelector(".dropdownProdukter button");
+                if (dropdownBtn) dropdownBtn.textContent = translations[lang].produkter;
+
                 const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
                 if (bluserLink) bluserLink.textContent = translations[lang].bluser;
+
                 const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
                 if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+
                 const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
-                document.getElementById("omOssText").textContent = translations[lang].omOssTekst;
-                document.getElementById("omOssText").innerHTML = translations[lang].omOssTekst;
-                document.getElementById("imageTitle").innerHTML = translations[lang].omOssTittel;
-                document.getElementById("imageTitle").textContent = translations[lang].omOssTittel;
-                document.getElementById("omOssHjorne").innerHTML = translations[lang].omOssLenke;
-                document.getElementById("omOssHjorne").textContent = translations[lang].omOssLenke;
 
-                langBtn.textContent = lang === "no" ? "EN" : "NO";
+                // Om oss tekster
+                const omOssText = document.getElementById("omOssText");
+                if (omOssText) omOssText.innerHTML = translations[lang].omOssTekst;
+
+                const imageTitle = document.getElementById("imageTitle");
+                if (imageTitle) imageTitle.textContent = translations[lang].omOssTittel;
+
+                const omOssHjorne = document.getElementById("omOssHjorne");
+                if (omOssHjorne) omOssHjorne.textContent = translations[lang].omOssLenke;
+
+                // Mobilmeny
+                const mobileProdukter = document.getElementById("mobileProdukter");
+                const mobileOmOss = document.getElementById("mobileOmOss");
+                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
+                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
+
+                // Oppdater språkknapper
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
+                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
             }
 
-            // Switch language on button click
-            langBtn.addEventListener("click", () => {
-                lang = lang === "no" ? "en" : "no";
-                localStorage.setItem("lang", lang); // remember choice
-                updateLanguage();
-            });
+            // Event listeners for begge knapper
+            if (langBtn) {
+                langBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
+
+            if (langMobileBtn) {
+                langMobileBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
 
             // Initialize text
             updateLanguage();
         });
     </script>
+
 
 </body>
 <footer id="footerProdukter" style="text-align:center; padding:20px; background-color:#627D98; font-family:sans-serif;">

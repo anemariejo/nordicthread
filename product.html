@@ -14,30 +14,46 @@
             <li class="dropdownProdukter">
                 <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
                     style="background:none; border:none; cursor:pointer;">
-                    <!-- Text will be updated by JS -->
+                    PRODUKTER
                 </button>
-
                 <div class="dropdown-fullwidth-wrapper">
                     <div class="dropdown-hover-area"></div>
                     <div class="dropdown-content">
-                        <a href="bluser.html"></a>
-                        <a href="skjerf.html"></a>
-                        <a href="secondthread.html"></a>
+                        <a href="bluser.html">BLUSER</a>
+                        <a href="skjerf.html">SKJERF</a>
+                        <a href="secondthread.html">SECOND THREAD</a>
                     </div>
                 </div>
             </li>
 
             <li>
-                <a href="index.html" class="headerTitle" id="mainPageBtn" title="">
-                    <span id="logoText"></span>
+                <a href="index.html" class="headerTitle" id="mainPageBtn" title="Gå til forsiden">
+                    <span id="logoText">Nordic Thread</span>
                 </a>
             </li>
 
-            <li>
-                <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;"></button>
-                <a href="omOss.html" class="headerText" id="omOssHjorne"></a>
+            <li class="rightMenu">
+                <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
+                    EN
+                </button>
+                <a href="omOss.html" class="headerText" id="omOssHjorne">OM OSS</a>
+            </li>
+
+            <!-- Hamburger (for mobil) -->
+            <li class="hamburger">
+                <div id="hamburgerBtn">&#9776;</div>
             </li>
         </ul>
+
+        <!-- Mobile menu overlay -->
+        <!-- Mobile menu overlay -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div id="closeMenu">&times;</div>
+            <a href="index.html?scroll=produktSection" id="mobileProdukter">PRODUKTER</a>
+            <a href="#" id="langMobileBtn">EN</a>
+            <a href="omOss.html" id="mobileOmOss">OM OSS</a>
+        </div>
+
     </header>
 
     <div class="whiteStripeBackground"></div>
@@ -45,6 +61,20 @@
     <div id="productDetails" class="product-page"></div>
 
     <script src="translations.js"></script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.style.display = 'flex';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+
+    </script>
     <script>
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);

@@ -11,11 +11,10 @@
     <header class="fixedHeader fade-header">
         <ul>
             <li class="dropdownProdukter">
-                <button id="produkterBtn" onclick="window.location.href='index.html?scroll=produktSection'"
-                    class="headerText" style="background:none; border:none; cursor:pointer;">
+                <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
+                    style="background:none; border:none; cursor:pointer;">
                     PRODUKTER
                 </button>
-
                 <div class="dropdown-fullwidth-wrapper">
                     <div class="dropdown-hover-area"></div>
                     <div class="dropdown-content">
@@ -32,13 +31,28 @@
                 </a>
             </li>
 
-            <li>
+            <li class="rightMenu">
                 <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
                     EN
                 </button>
                 <a href="omOss.html" class="headerText" id="omOssHjorne">OM OSS</a>
             </li>
+
+            <!-- Hamburger (for mobil) -->
+            <li class="hamburger">
+                <div id="hamburgerBtn">&#9776;</div>
+            </li>
         </ul>
+
+        <!-- Mobile menu overlay -->
+        <!-- Mobile menu overlay -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div id="closeMenu">&times;</div>
+            <a href="index.html?scroll=produktSection" id="mobileProdukter">PRODUKTER</a>
+            <a href="#" id="langMobileBtn">EN</a>
+            <a href="omOss.html" id="mobileOmOss">OM OSS</a>
+        </div>
+
     </header>
 
     <div class="whiteStripeBackground"></div>
@@ -78,6 +92,20 @@
 
     <script src="translations.js"></script>
     <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.style.display = 'flex';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+
+    </script>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             let lang = localStorage.getItem("lang") || "no";
             const langBtn = document.getElementById("langBtn");
@@ -86,6 +114,7 @@
             // Funksjon for å rendre produktene
             function renderBluser() {
                 const container = document.getElementById("produkterContainer");
+                if (!container) return; // sjekk at container finnes
                 container.innerHTML = ""; // tøm før re-render
 
                 bluser.forEach(product => {
@@ -93,51 +122,67 @@
                     section.classList.add("bluse");
 
                     section.innerHTML = `
-                    <a href="product.html?id=${product.id}" style="text-decoration:none; color:inherit;">
-                        <img src="${product.images[0]}" alt="${product.translations[lang].name}">
-                        <div class="bildetekst">
-                            <h2>${product.translations[lang].name}</h2>
-                            <p><strong>kr ${product.price},-</strong></p>
-                        </div>
-                    </a>
-                `;
+                <a href="product.html?id=${product.id}" style="text-decoration:none; color:inherit;">
+                    <img src="${product.images[0]}" alt="${product.translations[lang].name}">
+                    <div class="bildetekst">
+                        <h2>${product.translations[lang].name}</h2>
+                        <p><strong>kr ${product.price},-</strong></p>
+                    </div>
+                </a>
+            `;
                     container.appendChild(section);
                 });
             }
 
             // Funksjon for å oppdatere alt tekstinnhold
             function updateLanguage() {
-                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
+                const produkterBtn = document.getElementById('produkterBtn');
+                if (produkterBtn) produkterBtn.innerHTML = translations[lang].produkterText;
+
+                const footerText = document.getElementById('footerText');
+                if (footerText) footerText.innerHTML = translations[lang].footerText;
+
+                const omOssHjorne = document.getElementById('omOssHjorne');
+                if (omOssHjorne) omOssHjorne.innerHTML = translations[lang].omOssHjorne;
+
+                const dropdownProdukterBtn = document.querySelector(".dropdownProdukter button");
+                if (dropdownProdukterBtn) dropdownProdukterBtn.textContent = translations[lang].produkter;
+
                 const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
                 if (bluserLink) bluserLink.textContent = translations[lang].bluser;
+
                 const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
                 if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+
                 const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
-                document.getElementById('footerText').innerHTML = translations[lang].footerText;
-                document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
-                document.getElementById('produkterBtn').innerHTML = translations[lang].produkterText;
-                document.querySelector('.typeProdukt h1').innerHTML = translations[lang].typeProduktTitle;
-                document.querySelector('.typeProdukt p').innerHTML = translations[lang].typeProduktDesc;
+                const typeProduktTitle = document.querySelector('.typeProdukt h1');
+                if (typeProduktTitle) typeProduktTitle.innerHTML = translations[lang].typeProduktTitle;
 
-                langBtn.textContent = lang === "no" ? "EN" : "NO";
+                const typeProduktDesc = document.querySelector('.typeProdukt p');
+                if (typeProduktDesc) typeProduktDesc.innerHTML = translations[lang].typeProduktDesc;
+
+                // Oppdater språk-knapp
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
 
                 // Re-render produktene med nytt språk
                 renderBluser();
             }
 
             // Språk-knapp
-            langBtn.addEventListener("click", () => {
-                lang = lang === "no" ? "en" : "no";
-                localStorage.setItem("lang", lang);
-                updateLanguage();
-            });
+            if (langBtn) {
+                langBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
 
             // Første gang
             updateLanguage();
 
-            // Hent produkter og lagre i bluser[]
+            // Hent produkter og lagre i bluser[] (kun "bluse", ikke "stBluse")
             fetch("./data/products.json")
                 .then(response => response.json())
                 .then(products => {
@@ -153,6 +198,8 @@
                 .catch(error => console.error("Kunne ikke laste produkter:", error));
         });
     </script>
+
+
 
 </body>
 
