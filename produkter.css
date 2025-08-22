@@ -217,7 +217,7 @@ body {
 @media (max-width: 1023px) {
 
     .produkter {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         column-gap: 50px;
         row-gap: 40px;
         padding-left: 10px;
@@ -242,6 +242,66 @@ body {
     .price {
     text-align: center;
 }
+/* Hver bluse */
+    .bluse {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none; /* valgfritt */
+        background-color: #fff;
+    }
+
+    /* Bilder fyller bredde */
+    .bluse img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .ProdukterBilder {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    width: 100vw;           /* fill full screen width */
+    height: 80vh;          /* make entire section one viewport height */
+    margin: 0;
+    padding: 0;
+  }
+  /* TypeProdukt tekst større */
+    .typeProdukt h1 {
+        font-size: 4em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    .typeProdukt p {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .bildetekst h2 {
+        font-size: 4em; /* større navn */
+        margin: 0.2em 0;
+    }
+
+    /* Tekst under bildet */
+    .bildetekst {
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    .bildetekst p {
+        font-size: 2em; /* større pris */
+        margin: 0;
+    }
+
+    .stBluse img {
+        max-width: 400px;
+        /* or any max width you want */
+        width: 100%;
+        height: auto;
+    }
 
 
 }
