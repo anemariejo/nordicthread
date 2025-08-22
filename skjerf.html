@@ -84,10 +84,12 @@
             // Function to update all text
             function updateLanguage() {
                 document.getElementById('footerText').innerHTML = translations[lang].footerText;
-                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
-                document.querySelector(".dropdown-content a[href='bluser.html']").textContent = translations[lang].bluser;
-                document.querySelector(".dropdown-content a[href='skjerf.html']").textContent = translations[lang].skjerf;
-                document.querySelector(".dropdown-content a[href='secondthread.html']").textContent = translations[lang].secondThread;
+                const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
+                if (bluserLink) bluserLink.textContent = translations[lang].bluser;
+                const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
+                if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+                const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
+                if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
                 document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
                 document.getElementById('produkterBtn').innerHTML = translations[lang].produkterText;
 
