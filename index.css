@@ -404,7 +404,7 @@ a {
   /* Desktop: vis original menyer, skjul hamburger */
 .hamburger,
     .mobile-menu {
-        display: none !important;
+        display: none;
     }
 
     .dropdownProdukter,
