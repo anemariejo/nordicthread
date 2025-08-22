@@ -413,7 +413,7 @@ a {
 
     /* Desktop */  
     /* Desktop: vis original menyer, skjul hamburger */
-@media (min-width: 768px) {
+@media (min-width: 850px) {
     .hamburger,
     .mobile-menu {
         display: none !important;
