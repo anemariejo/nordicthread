@@ -12,7 +12,7 @@
         ],
         "colour": "Lilla",
         "fabric": "Resirkulert polyester",
-        "images": ["/images/STbluseLilla2.png", "/images/STbluseLilla.png", "/images/STlilla2.png", "/images/STlilla3.png", "/images/STlilla4.png", "/images/STlilla5.png", "/images/STlilla1.png"],
+        "images": ["/images/STbluseLilla2.png", "/images/STlilla1.png"],
         "price": "1590",
         "translations": {
             "en": {
@@ -42,7 +42,7 @@
         ],
         "colour": "Champagne",
         "fabric": "Resirkulert polyester",
-        "images": ["/images/STblusePleddChamp.png", "/images/champagneSTbluse.png", "/images/STchamp1.png", "/images/STchamp2.png", "/images/STchamp3.png", "/images/STchamp4.png", "/images/STchamp5.png"],
+        "images": ["/images/STblusePleddChamp.png", "/images/STchamp5.png"],
         "price": "1590",
         "translations": {
             "en": {
@@ -72,7 +72,7 @@
         ],
         "colour": "Rosa",
         "fabric": "Resirkulert polyester",
-        "images": ["/images/STbluseSloyfe.png", "/images/STrosaBluse.png", "/images/STrosaBluse2.png", "/images/STrosaBl.png"],
+        "images": ["/images/STbluseSloyfe.png", "/images/STrosaBl.png"],
         "price": "1590",
         "translations": {
             "en": {
@@ -102,7 +102,7 @@
         ],
         "colour": "Hvit",
         "fabric": "Resirkulert polyester",
-        "images": ["/images/SOLGTSOLD.png", "/images/SThvBl1.png", "/images/SThvBl2.png", "/images/SThvBl3.png", "/images/SThvBl4.png", "/images/SThvBl5.png"],
+        "images": ["/images/SOLGTSOLD.png", "/images/SThvBl5.png"],
         "price": "1590",
         "translations": {
             "en": {
@@ -132,7 +132,7 @@
         ],
         "colour": "Hvit",
         "fabric": "Resirkulert polyester",
-        "images": ["/images/STfuglGlitter.png", "/images/STfuglGlitter2.png", "/images/STfuglGlitter3.png", "/images/STfuglGlitter4.png", "/images/STfuglGlitter5.png", "/images/STfuglGlitter6.png", "/images/STfuglGlitter7.png"],
+        "images": ["/images/STfuglGlitter.png", "/images/STfuglGlitter7.png"],
         "price": "1590",
         "translations": {
             "en": {
@@ -159,7 +159,7 @@
         ],
         "colour": "Rosa",
         "fabric": "Viskose",
-        "images": ["/images/bluseRosaBlomst.png", "/images/bluseBlomstRosa1.png", "/images/bluseBlomstRosa2.png", "/images/bluseBlomstRosa3.png"],
+        "images": ["/images/bluseRosaBlomst.png", "/images/bluseBlomstRosa3.png"],
         "price": "1990",
         "translations": {
             "en": {
@@ -189,7 +189,7 @@
             "Rosa"
         ],
         "fabric": "Bomull",
-        "images": ["/images/bluseBlaaBlomst.png", "/images/bluseBlomstBla1.png", "/images/bluseBlomstBla2.png", "/images/bluseBlomstBla3.png", "/images/bluseBlomstBla4.png", "/images/bluseBlomstBla5.png"],
+        "images": ["/images/bluseBlaaBlomst.png", "/images/bluseBlomstBla5.png"],
         "price": "1990",
         "translations": {
             "en": {
