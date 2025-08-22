@@ -379,6 +379,7 @@ ul {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   text-align: left;
   justify-content: space-around;
   font-family: sans-serif;
