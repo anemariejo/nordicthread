@@ -135,7 +135,7 @@
             updateLanguage();
 
             // Hent produkter og lagre i bluser[]
-            fetch("data/products.json")
+            fetch("./data/products.json")
                 .then(response => response.json())
                 .then(products => {
                     bluser = products.filter(p => {

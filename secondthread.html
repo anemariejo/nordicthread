@@ -140,7 +140,7 @@
             updateLanguage();
 
             // Hent produkter
-            fetch("data/products.json")
+            fetch("./data/products.json")
                 .then(response => response.json())
                 .then(products => {
                     stBluser = products.filter(p =>
