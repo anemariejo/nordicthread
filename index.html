@@ -145,6 +145,20 @@
     </section>
 
     <script src="translations.js"></script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.style.display = 'flex';
+});
+
+closeMenu.addEventListener('click', () => {
+    mobileMenu.style.display = 'none';
+});
+
+    </script>
 
     <!-- For å scrolle ned til produkter fra andre .html-filer -->
     <script>
