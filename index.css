@@ -401,16 +401,7 @@ a {
     color: #627D98; /* use your palette color */
   }
 
-  /* Desktop: vis original menyer, skjul hamburger */
-.hamburger,
-    .mobile-menu {
-        display: none;
-    }
 
-    .dropdownProdukter,
-    .rightMenu {
-        display: flex !important;
-    }
 
     /* Sikre at logo er midt */
     .fixedHeader li:nth-child(2) {
@@ -418,6 +409,20 @@ a {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* Desktop */  
+    /* Desktop: vis original menyer, skjul hamburger */
+@media (min-width: 768px) {
+    .hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .dropdownProdukter,
+    .rightMenu {
+        display: flex !important;
+    }
+}
 
 
 /* Mobile */
