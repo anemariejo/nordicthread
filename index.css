@@ -427,7 +427,7 @@ a {
 
 
 /* Mobile */
-@media (max-width: 850px) {
+@media (max-width: 849px) {
   /* Skjul desktop-menyer */
     .dropdownProdukter,
     .rightMenu {
