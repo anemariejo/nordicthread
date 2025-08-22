@@ -23,49 +23,49 @@
 <body>
 
     <header class="fixedHeader fade-header">
-    <ul>
-        <li class="dropdownProdukter">
-            <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
-                style="background:none; border:none; cursor:pointer;">
-                PRODUKTER
-            </button>
-            <div class="dropdown-fullwidth-wrapper">
-                <div class="dropdown-hover-area"></div>
-                <div class="dropdown-content">
-                    <a href="bluser.html">BLUSER</a>
-                    <a href="skjerf.html">SKJERF</a>
-                    <a href="secondthread.html">SECOND THREAD</a>
+        <ul>
+            <li class="dropdownProdukter">
+                <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
+                    style="background:none; border:none; cursor:pointer;">
+                    PRODUKTER
+                </button>
+                <div class="dropdown-fullwidth-wrapper">
+                    <div class="dropdown-hover-area"></div>
+                    <div class="dropdown-content">
+                        <a href="bluser.html">BLUSER</a>
+                        <a href="skjerf.html">SKJERF</a>
+                        <a href="secondthread.html">SECOND THREAD</a>
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
 
-        <li>
-            <a href="index.html" class="headerTitle" id="mainPageBtn" title="Gå til forsiden">
-                <span id="logoText">Nordic Thread</span>
-            </a>
-        </li>
+            <li>
+                <a href="index.html" class="headerTitle" id="mainPageBtn" title="Gå til forsiden">
+                    <span id="logoText">Nordic Thread</span>
+                </a>
+            </li>
 
-        <li class="rightMenu">
-            <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
-                EN
-            </button>
-            <a href="omOss.html" class="headerText" id="omOssHjorne">OM OSS</a>
-        </li>
+            <li class="rightMenu">
+                <button id="langBtn" class="headerText" style="background:none; border:none; cursor:pointer;">
+                    EN
+                </button>
+                <a href="omOss.html" class="headerText" id="omOssHjorne">OM OSS</a>
+            </li>
 
-        <!-- Hamburger (for mobil) -->
-        <li class="hamburger">
-            <div id="hamburgerBtn">&#9776;</div>
-        </li>
-    </ul>
+            <!-- Hamburger (for mobil) -->
+            <li class="hamburger">
+                <div id="hamburgerBtn">&#9776;</div>
+            </li>
+        </ul>
 
-    <!-- Mobile menu overlay -->
-    <div id="mobileMenu" class="mobile-menu">
-        <div id="closeMenu">&times;</div>
-        <a href="index.html?scroll=produktSection">PRODUKTER</a>
-        <a href="#" id="langMobileBtn">EN</a>
-        <a href="omOss.html">OM OSS</a>
-    </div>
-</header>
+        <!-- Mobile menu overlay -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div id="closeMenu">&times;</div>
+            <a href="index.html?scroll=produktSection">PRODUKTER</a>
+            <a href="#" id="langMobileBtn">EN</a>
+            <a href="omOss.html">OM OSS</a>
+        </div>
+    </header>
 
 
     <div class="whiteStripeBackground"></div> <!-- Hvit bakgrunn navigasjonsbar -->
@@ -121,8 +121,7 @@
                 <img src="/images/selfieRosaSTbluse.png" width="300vw" height="400vh" class="carousel-image active"
                     alt="Image 1">
                 <img src="/images/STbluseSloyfe.png" width="300vw" height="400vh" class="carousel-image" alt="Image 2">
-                <img src="/images/STchamp5.png" width="300vw" height="400vh" class="carousel-image"
-                    alt="Image 3">
+                <img src="/images/STchamp5.png" width="300vw" height="400vh" class="carousel-image" alt="Image 3">
             </div>
             <p><a id="instagramLenke" href="https://www.instagram.com/nordicthread.co" target="_blank"
                     rel="noopener noreferrer">Følg oss på Instagram!</a></p>
@@ -160,16 +159,16 @@
     <script src="translations.js"></script>
     <script>
         const hamburgerBtn = document.getElementById('hamburgerBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
 
-hamburgerBtn.addEventListener('click', () => {
-    mobileMenu.style.display = 'flex';
-});
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.style.display = 'flex';
+        });
 
-closeMenu.addEventListener('click', () => {
-    mobileMenu.style.display = 'none';
-});
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
 
     </script>
 
@@ -187,12 +186,11 @@ closeMenu.addEventListener('click', () => {
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            // Default language
             let lang = localStorage.getItem("lang") || "no";
 
             const langBtn = document.getElementById("langBtn");
+            const langMobileBtn = document.getElementById("langMobileBtn"); // mobil knapp
 
-            // Function to update all text
             function updateLanguage() {
                 // Dropdown meny
                 document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
@@ -204,7 +202,9 @@ closeMenu.addEventListener('click', () => {
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
                 // Andre tekster
-                document.getElementById("omOssTekst").textContent = translations[lang].omOss;
+                const omOssTekst = document.getElementById("omOssTekst");
+                if (omOssTekst) omOssTekst.textContent = translations[lang].omOss;
+
                 document.getElementById("logoText").textContent = translations[lang].logoText;
                 document.getElementById("instagramLenke").textContent = translations[lang].followInstagram;
 
@@ -225,6 +225,9 @@ closeMenu.addEventListener('click', () => {
                 document.getElementById("imgSecondThread").alt = translations[lang].altSecondThread;
                 document.getElementById("txtSecondThread").textContent = translations[lang].altSecondThread;
 
+                document.getElementById("omOssHjorne").innerHTML = translations[lang].omOssLenke;
+                document.getElementById("omOssHjorne").textContent = translations[lang].omOssLenke;
+
                 // Carousel images
                 const carouselImages = document.querySelectorAll(".carousel-image");
                 if (carouselImages.length >= 3) {
@@ -233,21 +236,32 @@ closeMenu.addEventListener('click', () => {
                     carouselImages[2].alt = translations[lang].altCarousel3;
                 }
 
-                // Language toggle button
-                const langBtn = document.getElementById("langBtn");
-                langBtn.textContent = lang === "no" ? "EN" : "NO";
+                // Oppdater tekst på begge språkknapper
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
+                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
             }
 
-            // Switch language on button click
-            langBtn.addEventListener("click", () => {
-                lang = lang === "no" ? "en" : "no";
-                localStorage.setItem("lang", lang); // remember choice
-                updateLanguage();
-            });
+            // Event listeners for begge knapper
+            if (langBtn) {
+                langBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
+
+            if (langMobileBtn) {
+                langMobileBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
 
             // Initialize text
             updateLanguage();
         });
+
 
 
     </script>
