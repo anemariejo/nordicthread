@@ -43,10 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 const match = sectionsToObserve.find(obj => obj.section === entry.target);
                 if (match) {
-                    logoText.style.color = match.colors.logo;
-                    produkterTekst.style.color = match.colors.produkter;
-                    omOssTekst.style.color = match.colors.omOss;
+                    if (logoText) logoText.style.color = match.colors.logo;
+                    if (produkterTekst) produkterTekst.style.color = match.colors.produkter;
+                    if (omOssTekst) omOssTekst.style.color = match.colors.omOss;
                 }
+
             }
         });
     }, {

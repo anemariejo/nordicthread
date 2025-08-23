@@ -25,7 +25,7 @@
     <header class="fixedHeader fade-header">
         <ul>
             <li class="dropdownProdukter">
-                <button onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
+                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
                     style="background:none; border:none; cursor:pointer;">
                     PRODUKTER
                 </button>
@@ -196,11 +196,14 @@
             function updateLanguage() {
                 // Dropdown meny (desktop)
                 document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
-                const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
+
+                const bluserLink = document.getElementById("linkBluser");
                 if (bluserLink) bluserLink.textContent = translations[lang].bluser;
-                const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
+
+                const skjerfLink = document.getElementById("linkSkjerf");
                 if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
-                const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
+
+                const secondThreadLink = document.getElementById("linkSecondThread");
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
                 // Andre tekster (desktop)
