@@ -150,12 +150,16 @@
             function updateLanguage() {
                 document.getElementById('footerText').innerHTML = translations[lang].footerText;
 
+                // Dropdown meny (desktop)
                 document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
-                const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
+
+                const bluserLink = document.getElementById("linkBluser");
                 if (bluserLink) bluserLink.textContent = translations[lang].bluser;
-                const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
+
+                const skjerfLink = document.getElementById("linkSkjerf");
                 if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
-                const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
+
+                const secondThreadLink = document.getElementById("linkSecondThread");
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
                 document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
                 document.getElementById('logoText').textContent = translations[lang].logoText;

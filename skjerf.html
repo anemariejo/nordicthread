@@ -117,14 +117,17 @@
             const dropdownBtn = document.querySelector(".dropdownProdukter button");
             if (dropdownBtn) dropdownBtn.textContent = translations[lang].produkter;
 
-            const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
-            if (bluserLink) bluserLink.textContent = translations[lang].bluser;
+            // Dropdown meny (desktop)
+                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
 
-            const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
-            if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+                const bluserLink = document.getElementById("linkBluser");
+                if (bluserLink) bluserLink.textContent = translations[lang].bluser;
 
-            const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
-            if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
+                const skjerfLink = document.getElementById("linkSkjerf");
+                if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+
+                const secondThreadLink = document.getElementById("linkSecondThread");
+                if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
             // Om oss lenke (desktop)
             const omOssHjorne = document.getElementById('omOssHjorne');

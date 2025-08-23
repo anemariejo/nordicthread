@@ -148,13 +148,16 @@
                 const dropdownProdukterBtn = document.querySelector(".dropdownProdukter button");
                 if (dropdownProdukterBtn) dropdownProdukterBtn.textContent = translations[lang].produkter;
 
-                const bluserLink = document.querySelector(".dropdown-content a[href='bluser.html']");
+                // Dropdown meny (desktop)
+                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
+
+                const bluserLink = document.getElementById("linkBluser");
                 if (bluserLink) bluserLink.textContent = translations[lang].bluser;
 
-                const skjerfLink = document.querySelector(".dropdown-content a[href='skjerf.html']");
+                const skjerfLink = document.getElementById("linkSkjerf");
                 if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
 
-                const secondThreadLink = document.querySelector(".dropdown-content a[href='secondthread.html']");
+                const secondThreadLink = document.getElementById("linkSecondThread");
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
                 const typeProduktTitle = document.querySelector('.typeProdukt h1');
