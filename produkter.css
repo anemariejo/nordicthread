@@ -482,7 +482,7 @@ body {
         /* ensure it fits inside container */
         display: block;
         /* remove flex interfering wrap */
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     /* Tekst under bildet */
