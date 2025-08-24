@@ -420,14 +420,14 @@ body {
     }
 
     .produkt {
-        width: 100%;
-        /* almost full width */
-        height: auto;
-        /* adjust height to image */
-        margin-bottom: 1em;
-        /* spacing between products */
-        position: relative;
-    }
+    display: flex;
+    flex-direction: column;  /* stack image above text */
+    align-items: center;     /* center horizontally */
+    text-align: center;      /* center text */
+    width: 100%;             /* full width on mobile */
+    max-width: 200px;        /* optional: limit width to force wrap */
+    margin-bottom: 1em;
+}
 
     .produkt img {
         width: 100%;
@@ -486,18 +486,12 @@ body {
 
     /* Tekst under bildet */
     .bildeTekst {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-        /* move text below image */
-        bottom: auto;
-        left: auto;
-        transform: none;
-        margin-top: 0.5em;
-        white-space: normal;
-        /* allow text wrap */
-        text-align: center;
-    }
+    white-space: normal;      /* allow wrapping */
+    word-break: break-word;   /* break long words if necessary */
+    overflow-wrap: break-word;
+    margin-top: 0.5em;
+    font-size: 1em;
+}
 
     .bildeTekst p {
         margin: 0;
