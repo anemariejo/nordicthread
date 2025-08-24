@@ -182,6 +182,7 @@
 
                 // Oppdater språk-knapp
                 if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
+                
 
                 // Re-render produktene med nytt språk
                 renderBluser();
@@ -198,8 +199,8 @@
             }
 
             // Språk-knapp (mobile)
-            if (mobileLangBtn) {
-                mobileLangBtn.addEventListener("click", () => {
+            if (langMobileBtn) {
+                langMobileBtn.addEventListener("click", () => {
                     lang = lang === "no" ? "en" : "no";
                     localStorage.setItem("lang", lang);
                     updateLanguage();
