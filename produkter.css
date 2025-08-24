@@ -390,12 +390,15 @@ body {
     }
 
     .omOssText {
-        padding: 2rem;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .omOssImage {
         height: 400px; /* set a fixed height for mobile */
     }
     #imageTitle {
+        display: flex;
+        flex-wrap: wrap;
         font-size: 2.5rem;
         padding: 10px 20px;
     }
