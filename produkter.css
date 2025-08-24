@@ -389,8 +389,11 @@ body {
         height: auto;
     }
 
+    .omOssText {
+        padding: 2rem;
+    }
     .omOssImage {
-        height: 300px; /* set a fixed height for mobile */
+        height: 400px; /* set a fixed height for mobile */
     }
     #imageTitle {
         font-size: 2.5rem;
