@@ -452,6 +452,8 @@ body {
 
     /* Tekst under bildet */
     .bildeTekst {
+        display: flex;
+        flex-wrap: wrap;
         position: relative;     /* move text below image */
         bottom: auto;
         left: auto;
