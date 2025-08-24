@@ -162,6 +162,7 @@
                 if (window.currentProduct) {
                     renderProduct(window.currentProduct, lang); // render product in correct language
                 }
+                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
             }
 
             // Language buttons
@@ -176,7 +177,7 @@
                 localStorage.setItem("lang", lang);
                 updateLanguage();
             });
-            
+
             // Første språk-init
             updateLanguage();
 
