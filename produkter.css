@@ -418,7 +418,7 @@ body {
 
 .product-image img {
     max-width: 100%;
-    max-height: 60vh; /* make it smaller relative to viewport height */
+    max-height: 80vh; /* make it smaller relative to viewport height */
     height: auto;
     object-fit: contain; /* show whole image without cutting */
     margin: 0 auto;
