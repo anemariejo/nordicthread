@@ -605,7 +605,7 @@ a {
     /* Desktop */
 .product-flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;       /* vertikal midt */
     justify-content: center;   /* horisontal midt */
     gap: 2rem;                 /* mellom bilde og tekst */
