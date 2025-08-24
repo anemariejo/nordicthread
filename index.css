@@ -413,7 +413,7 @@ a {
 
     /* Desktop */  
     /* Desktop: vis original menyer, skjul hamburger */
-@media (min-width: 850px) {
+@media (min-width: 769px) {
     .hamburger,
     .mobile-menu {
         display: none !important;
@@ -427,7 +427,7 @@ a {
 
 
 /* Mobile */
-@media (max-width: 849px) {
+@media (max-width: 768px) {
   /* Skjul desktop-menyer */
     .dropdownProdukter,
     .rightMenu {
@@ -626,7 +626,7 @@ a {
 
 /* Tablet */
 /* Tablet & små desktop */
-@media (min-width: 850px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1023px) {
     /* Desktop */
 .product-flex {
     display: flex;

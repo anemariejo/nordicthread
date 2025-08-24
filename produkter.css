@@ -308,7 +308,7 @@ body {
 
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     /* Container for produkter */
     #produkterContainer {
