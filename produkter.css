@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -10,7 +11,8 @@ body {
 }
 
 .product-page {
-    flex: 1; /* this will grow to fill remaining space */
+    flex: 1;
+    /* this will grow to fill remaining space */
 }
 
 .produkter {
@@ -65,26 +67,38 @@ body {
     */
 
 .typeProdukt {
-    display: flex;             /* gjør boksen til flex-container */
-    flex-direction: column;    /* stakk elementene vertikalt */
-    justify-content: center;   /* midtstill vertikalt */
-    align-items: center;       /* midtstill horisontalt */
-    padding: 60px 20px 20px;        /* top/bottom, left/right */
-    width: 100%;               /* fyller hele skjermen */
-    min-height: 200px;         /* eller ønsket høyde */
+    display: flex;
+    /* gjør boksen til flex-container */
+    flex-direction: column;
+    /* stakk elementene vertikalt */
+    justify-content: center;
+    /* midtstill vertikalt */
+    align-items: center;
+    /* midtstill horisontalt */
+    padding: 60px 20px 20px;
+    /* top/bottom, left/right */
+    width: 100%;
+    /* fyller hele skjermen */
+    min-height: 200px;
+    /* eller ønsket høyde */
     background-color: #627D98;
     color: white;
     font-family: sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    box-sizing: border-box;    /* padding teller med i bredden */
+    box-sizing: border-box;
+    /* padding teller med i bredden */
     text-align: center;
 }
 
-.typeProdukt p, .typeProdukt h1 {
-    max-width: 1200px;         /* begrenser tekstbredde */
-    word-wrap: break-word;     /* lange ord wraps */
-    margin: 0 0 0.5em 0;         /* litt mellomrom mellom elementer */
+.typeProdukt p,
+.typeProdukt h1 {
+    max-width: 1200px;
+    /* begrenser tekstbredde */
+    word-wrap: break-word;
+    /* lange ord wraps */
+    margin: 0 0 0.5em 0;
+    /* litt mellomrom mellom elementer */
 }
 
 
@@ -178,9 +192,12 @@ body {
     gap: 2rem;
     padding-left: 30px;
     padding-right: 30px;
-    align-items: center; /* centers content vertically */
-    justify-content: space-between; /* keeps image left, text right */
-    height: 80vh; /* makes the flex container almost full height */
+    align-items: center;
+    /* centers content vertically */
+    justify-content: space-between;
+    /* keeps image left, text right */
+    height: 80vh;
+    /* makes the flex container almost full height */
 }
 
 .product-image img {
@@ -196,7 +213,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-   
+
 }
 
 .product-info h1 {
@@ -205,7 +222,7 @@ body {
 
 #productDescription {
     line-height: 1.5;
-    
+
 }
 
 .product-info p {
@@ -229,27 +246,31 @@ body {
     .omOssText {
         padding: 0;
     }
+
     .product-flex {
         flex-direction: column;
         height: auto;
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
     .product-info h1 {
-    text-align: center;
-    padding-top: 0;
-}
+        text-align: center;
+        padding-top: 0;
+    }
+
     .price {
-    text-align: center;
-}
-/* Hver bluse */
+        text-align: center;
+    }
+
+    /* Hver bluse */
     .bluse {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: none; /* valgfritt */
+        border: none;
+        /* valgfritt */
         background-color: #fff;
     }
 
@@ -260,14 +281,18 @@ body {
     }
 
     .ProdukterBilder {
-    display: flex;
-    flex-direction: column; /* stack vertically */
-    width: 100vw;           /* fill full screen width */
-    height: 80vh;          /* make entire section one viewport height */
-    margin: 0;
-    padding: 0;
-  }
-  /* TypeProdukt tekst større */
+        display: flex;
+        flex-direction: column;
+        /* stack vertically */
+        width: 100vw;
+        /* fill full screen width */
+        height: 80vh;
+        /* make entire section one viewport height */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* TypeProdukt tekst større */
     .typeProdukt h1 {
         font-size: 4em;
         text-align: center;
@@ -280,7 +305,8 @@ body {
     }
 
     .bildetekst h2 {
-        font-size: 4em; /* større navn */
+        font-size: 4em;
+        /* større navn */
         margin: 0.2em 0;
     }
 
@@ -291,7 +317,8 @@ body {
     }
 
     .bildetekst p {
-        font-size: 2em; /* større pris */
+        font-size: 2em;
+        /* større pris */
         margin: 0;
     }
 
@@ -312,7 +339,8 @@ body {
     /* Container for produkter */
     #produkterContainer {
         display: flex;
-        flex-direction: column; /* én og én vertikalt */
+        flex-direction: column;
+        /* én og én vertikalt */
         gap: 2em;
         padding: 1em;
         width: 90%;
@@ -333,7 +361,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: none; /* valgfritt */
+        border: none;
+        /* valgfritt */
         background-color: #fff;
     }
 
@@ -345,15 +374,30 @@ body {
     }
 
     .ProdukterBilder {
-    display: flex;
-    flex-direction: column; /* stack vertically */
-    width: 100%;           /* fill full screen width */
-    height: 80vh;          /* make entire section one viewport height */
-    margin: 0;
-    padding: 0;
-  }
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        /* allow container to expand */
+        margin: 0;
+        padding: 0;
+    }
 
-  /* TypeProdukt tekst større */
+    .produkt {
+        width: 100%;
+        height: auto;
+        /* let image determine height */
+        margin-bottom: 1em;
+        /* optional spacing between products */
+    }
+
+    .produkt img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* TypeProdukt tekst større */
     .typeProdukt h1 {
         padding-top: 10px;
         font-size: 2em;
@@ -367,7 +411,8 @@ body {
     }
 
     .bildetekst h2 {
-        font-size: 1.5em; /* større navn */
+        font-size: 1.5em;
+        /* større navn */
         margin: 0.2em 0;
     }
 
@@ -378,7 +423,8 @@ body {
     }
 
     .bildetekst p {
-        font-size: 1em; /* større pris */
+        font-size: 1em;
+        /* større pris */
         margin: 0;
     }
 
@@ -393,15 +439,19 @@ body {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .omOssImage {
-        height: auto; /* set a fixed height for mobile */
+        height: auto;
+        /* set a fixed height for mobile */
     }
+
     #imageTitle {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 2rem; /* smaller on mobile */
+        font-size: 2rem;
+        /* smaller on mobile */
         padding: 10px 20px;
         color: white;
         text-align: center;
@@ -414,30 +464,33 @@ body {
     .product-flex {
         flex-direction: column;
     }
+
     .product-image img {
-    padding-left: 0px;
-    padding-right: 0px;
-    /* almost full viewport height */
+        padding-left: 0px;
+        padding-right: 0px;
+        /* almost full viewport height */
     }
 
     .product-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 
-.product-image img {
-    max-width: 100%;
-    max-height: 80vh; /* make it smaller relative to viewport height */
-    height: auto;
-    object-fit: contain; /* show whole image without cutting */
-    margin: 0 auto;
-}
+    .product-image img {
+        max-width: 100%;
+        max-height: 80vh;
+        /* make it smaller relative to viewport height */
+        height: auto;
+        object-fit: contain;
+        /* show whole image without cutting */
+        margin: 0 auto;
+    }
 
     .product-image,
     .product-info {
         max-width: 100%;
     }
-    
+
 }
