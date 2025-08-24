@@ -482,7 +482,6 @@ body {
         /* ensure it fits inside container */
         display: block;
         /* remove flex interfering wrap */
-        margin-top: 40px;
     }
 
     /* Tekst under bildet */
