@@ -373,22 +373,20 @@ body {
         align-items: center;
     }
 
+    /* Container for produkter */
     .ProdukterBilder {
         display: flex;
-        flex-direction: row;
+        flex-direction: column; /* stack products vertically */
         width: 100%;
-        height: auto;
-        /* allow container to expand */
+        height: auto;           /* allow container to expand */
         margin: 0;
         padding: 0;
     }
 
     .produkt {
         width: 100%;
-        height: auto;
-        /* let image determine height */
-        margin-bottom: 1em;
-        /* optional spacing between products */
+        height: auto;           /* let image determine height */
+        margin-bottom: 1em;     /* spacing between products */
     }
 
     .produkt img {
@@ -417,9 +415,11 @@ body {
     }
 
     /* Tekst under bildet */
-    .bildetekst {
+    .bildeTekst {
         text-align: center;
-        margin-top: 0.5em;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .bildetekst p {
