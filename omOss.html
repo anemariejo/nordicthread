@@ -127,6 +127,9 @@
             const langMobileBtn = document.getElementById("langMobileBtn"); // mobil knapp
 
             function updateLanguage() {
+                // Footer tekst
+                const footerText = document.getElementById('footerText');
+                if (footerText) footerText.innerHTML = translations[lang].footerText;
                 // Dropdown meny (desktop)
                 const dropdownBtn = document.querySelector(".dropdownProdukter button");
                 if (dropdownBtn) dropdownBtn.textContent = translations[lang].produkter;
