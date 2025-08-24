@@ -159,8 +159,6 @@
                 document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
                 document.getElementById('logoText').textContent = translations[lang].logoText;
 
-                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
-
                 if (window.currentProduct) {
                     renderProduct(window.currentProduct, lang); // render product in correct language
                 }
