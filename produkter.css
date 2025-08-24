@@ -451,9 +451,13 @@ body {
     }
 
     #txtSecondThread {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    white-space: normal;      /* allow wrapping */
+    word-break: break-word;   /* break long words if needed */
+    overflow-wrap: break-word;
+    text-align: center;       /* center the text */
+    max-width: 100%;          /* ensure it fits inside container */
+    display: block;           /* remove flex interfering wrap */
+}
 
     /* Tekst under bildet */
     .bildeTekst {
