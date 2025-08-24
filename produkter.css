@@ -394,13 +394,17 @@ body {
         padding-right: 10px;
     }
     .omOssImage {
-        height: 400px; /* set a fixed height for mobile */
+        height: auto; /* set a fixed height for mobile */
     }
     #imageTitle {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem; /* smaller on mobile */
         padding: 10px 20px;
+        color: white;
+        text-align: center;
     }
 
     .comingSoon {
