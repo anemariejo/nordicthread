@@ -202,15 +202,6 @@
             }
 
             // Språk-knapp (mobile)
-            if (mobileLangBtn) {
-                mobileLangBtn.addEventListener("click", () => {
-                    lang = lang === "no" ? "en" : "no";
-                    localStorage.setItem("lang", lang);
-                    updateLanguage();
-                });
-            }
-
-
             if (langMobileBtn) {
                 langMobileBtn.addEventListener("click", () => {
                     lang = lang === "no" ? "en" : "no";

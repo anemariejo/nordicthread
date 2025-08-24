@@ -174,7 +174,9 @@
                 if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
                 if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
-                langBtn.textContent = lang === "no" ? "EN" : "NO";
+                // Oppdater språkknapper
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
+                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
 
                 if (window.currentProduct) {
                     renderProduct(window.currentProduct, lang);
@@ -191,8 +193,8 @@
             }
 
             // Språk-knapp (mobile)
-            if (mobileLangBtn) {
-                mobileLangBtn.addEventListener("click", () => {
+            if (langMobileBtn) {
+                langMobileBtn.addEventListener("click", () => {
                     lang = lang === "no" ? "en" : "no";
                     localStorage.setItem("lang", lang);
                     updateLanguage();
