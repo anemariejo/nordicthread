@@ -147,81 +147,51 @@
         document.addEventListener("DOMContentLoaded", () => {
             let lang = localStorage.getItem("lang") || "no";
             const langBtn = document.getElementById("langBtn");
+            const langMobileBtn = document.getElementById("langMobileBtn");
 
             function updateLanguage() {
                 document.getElementById('footerText').innerHTML = translations[lang].footerText;
 
-                // Dropdown meny (desktop)
                 document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
-
-                const bluserLink = document.getElementById("linkBluser");
-                if (bluserLink) bluserLink.textContent = translations[lang].bluser;
-
-                const skjerfLink = document.getElementById("linkSkjerf");
-                if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
-
-                const secondThreadLink = document.getElementById("linkSecondThread");
-                if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
+                document.getElementById("linkBluser").textContent = translations[lang].bluser;
+                document.getElementById("linkSkjerf").textContent = translations[lang].skjerf;
+                document.getElementById("linkSecondThread").textContent = translations[lang].secondThread;
                 document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
                 document.getElementById('logoText').textContent = translations[lang].logoText;
 
-                // Mobilmeny
-                const mobileProdukter = document.getElementById("mobileProdukter");
-                const mobileOmOss = document.getElementById("mobileOmOss");
-                const mobileLangBtn = document.getElementById("langMobileBtn");
-
-                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
-                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
                 if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
-                // Oppdater språkknapper
-                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
-                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
-
                 if (window.currentProduct) {
-                    renderProduct(window.currentProduct, lang);
+                    renderProduct(window.currentProduct, lang); // render product in correct language
                 }
             }
 
-            // Språk-knapp (desktop)
-            if (langBtn) {
-                langBtn.addEventListener("click", () => {
-                    lang = lang === "no" ? "en" : "no";
-                    localStorage.setItem("lang", lang);
-                    updateLanguage();
-                });
-            }
-
-            // Språk-knapp (mobile)
-            if (langMobileBtn) {
-                langMobileBtn.addEventListener("click", () => {
-                    lang = lang === "no" ? "en" : "no";
-                    localStorage.setItem("lang", lang);
-                    updateLanguage();
-                });
-            }
-
-
-            langBtn.addEventListener("click", () => {
+            // Language buttons
+            if (langBtn) langBtn.addEventListener("click", () => {
                 lang = lang === "no" ? "en" : "no";
                 localStorage.setItem("lang", lang);
                 updateLanguage();
             });
 
-            updateLanguage();
+            if (langMobileBtn) langMobileBtn.addEventListener("click", () => {
+                lang = lang === "no" ? "en" : "no";
+                localStorage.setItem("lang", lang);
+                updateLanguage();
+            });
 
+            // Fetch product data **first**, then update language
             const productId = getQueryParam("id");
 
             fetch("./data/products.json")
-                .then(response => response.json())
+                .then(res => res.json())
                 .then(products => {
                     const product = products.find(p => p.id === productId);
                     window.currentProduct = product;
-                    renderProduct(product, lang);
+                    updateLanguage(); // <-- call here after product is loaded
                 })
-                .catch(error => console.error("Kunne ikke laste produkt:", error));
-
+                .catch(err => console.error("Kunne ikke laste produkt:", err));
         });
+
     </script>
 
 
