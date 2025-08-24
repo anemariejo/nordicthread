@@ -376,28 +376,36 @@ body {
     /* Container for produkter */
     .ProdukterBilder {
         display: flex;
-        flex-direction: column; /* stack products vertically */
+        flex-direction: column; /* stack vertically */
+        align-items: center;
         width: 100%;
-        height: auto;           /* allow container to expand */
+        height: auto;           /* let container grow */
         margin: 0;
         padding: 0;
     }
 
     .produkt {
-        width: 100%;
-        height: auto;           /* let image determine height */
+        width: 90%;             /* almost full width */
+        height: auto;           /* adjust height to image */
         margin-bottom: 1em;     /* spacing between products */
-        display: flex;
-        flex-direction: column; /* stack image + text */
-        align-items: center;
+        position: relative;
     }
 
     .produkt img {
-        width: 100%;            /* full width */
+        width: 100%;            /* fill container */
         height: auto;           /* maintain aspect ratio */
-        max-width: 400px;       /* optional max width */
         object-fit: cover;
         display: block;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .produkt:hover .bildeTekst {
+        transform: none;        /* remove hover transform */
+    }
+
+    .produkt:hover img {
+        transform: none;        /* remove hover scale on mobile */
+        box-shadow: none;       /* remove shadow on mobile */
     }
 
     /* TypeProdukt tekst større */
@@ -421,9 +429,13 @@ body {
 
     /* Tekst under bildet */
     .bildeTekst {
-        text-align: center;
+        position: relative;     /* move text below image */
+        bottom: auto;
+        left: auto;
+        transform: none;
         margin-top: 0.5em;
-        font-size: 1em;
+        white-space: normal;    /* allow text wrap */
+        text-align: center;
     }
 
     .bildetekst p {
