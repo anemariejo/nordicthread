@@ -387,12 +387,17 @@ body {
         width: 100%;
         height: auto;           /* let image determine height */
         margin-bottom: 1em;     /* spacing between products */
+        display: flex;
+        flex-direction: column; /* stack image + text */
+        align-items: center;
     }
 
     .produkt img {
-        width: 100%;
-        height: auto;
+        width: 100%;            /* full width */
+        height: auto;           /* maintain aspect ratio */
+        max-width: 400px;       /* optional max width */
         object-fit: cover;
+        display: block;
     }
 
     /* TypeProdukt tekst større */
@@ -417,9 +422,8 @@ body {
     /* Tekst under bildet */
     .bildeTekst {
         text-align: center;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: 0.5em;
+        font-size: 1em;
     }
 
     .bildetekst p {
