@@ -152,6 +152,7 @@
             function updateLanguage() {
                 document.getElementById('footerText').innerHTML = translations[lang].footerText;
 
+                // Desktop header
                 document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
                 document.getElementById("linkBluser").textContent = translations[lang].bluser;
                 document.getElementById("linkSkjerf").textContent = translations[lang].skjerf;
@@ -159,11 +160,21 @@
                 document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
                 document.getElementById('logoText').textContent = translations[lang].logoText;
 
+                // Mobile menu
+                const mobileProdukter = document.getElementById("mobileProdukter");
+                const mobileOmOss = document.getElementById("mobileOmOss");
+                const langMobileBtn = document.getElementById("langMobileBtn");
+
+                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
+                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssHjorne;
+                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
+
+                // Product details
                 if (window.currentProduct) {
-                    renderProduct(window.currentProduct, lang); // render product in correct language
-                    if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
+                    renderProduct(window.currentProduct, lang);
                 }
             }
+
 
             // Language buttons
             if (langBtn) langBtn.addEventListener("click", () => {
