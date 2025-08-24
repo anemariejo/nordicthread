@@ -389,14 +389,12 @@ body {
         height: auto;
     }
 
-    .omOssText {
-        padding-top: 10px;
-    }
     .omOssImage {
         height: 300px; /* set a fixed height for mobile */
     }
-    .omOssImage h1 {
-        font-size: 2.5rem; 
+    #imageTitle {
+        font-size: 2.5rem;
+        padding: 10px 20px;
     }
 
     .comingSoon {
