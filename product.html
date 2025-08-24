@@ -164,10 +164,12 @@
                 const mobileProdukter = document.getElementById("mobileProdukter");
                 const mobileOmOss = document.getElementById("mobileOmOss");
                 const langMobileBtn = document.getElementById("langMobileBtn");
+                const mobileLangBtn = document.getElementById("langMobileBtn");
 
                 if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
                 if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssHjorne;
                 if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
+                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
                 // Product details
                 if (window.currentProduct) {
