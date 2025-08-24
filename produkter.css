@@ -340,7 +340,7 @@ body {
 
     /* Bilder fyller bredde */
     .bluse img {
-        width: 100%;
+        width: 70%;
         height: auto;
         object-fit: cover;
         border-radius: 8px;
@@ -357,18 +357,19 @@ body {
 
   /* TypeProdukt tekst større */
     .typeProdukt h1 {
-        font-size: 4em;
+        padding-top: 10px;
+        font-size: 2em;
         text-align: center;
         margin-bottom: 0.5em;
     }
 
     .typeProdukt p {
-        font-size: 2em;
+        font-size: 1em;
         text-align: center;
     }
 
     .bildetekst h2 {
-        font-size: 4em; /* større navn */
+        font-size: 1em; /* større navn */
         margin: 0.2em 0;
     }
 
@@ -379,7 +380,7 @@ body {
     }
 
     .bildetekst p {
-        font-size: 2em; /* større pris */
+        font-size: 1em; /* større pris */
         margin: 0;
     }
 
