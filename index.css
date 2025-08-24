@@ -515,17 +515,6 @@ a {
         padding: 1em;
     }
 
-  .bildeTekst {
-    position: absolute;     /* overlay text on image if desired */
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 1.2em;
-    padding: 0.3em 0.6em;
-    border-radius: 4px;
-  }
-
   .tekstBilde {
     top: 50%; /* flyttet lenger opp */
     left: 1em; /* juster gjerne litt inn fra venstre */
