@@ -176,6 +176,9 @@
                 localStorage.setItem("lang", lang);
                 updateLanguage();
             });
+            
+            // Første språk-init
+            updateLanguage();
 
             // Fetch product data **first**, then update language
             const productId = getQueryParam("id");
