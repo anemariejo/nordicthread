@@ -12,8 +12,8 @@
     <header class="fixedHeader fade-header">
         <ul>
             <li class="dropdownProdukter">
-                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
-                    style="background:none; border:none; cursor:pointer;">
+                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'"
+                    class="headerText" style="background:none; border:none; cursor:pointer;">
                     PRODUKTER
                 </button>
                 <div class="dropdown-fullwidth-wrapper">
@@ -192,6 +192,7 @@
             }
 
             // Event listeners for begge språkknapper
+            // Språk-knapp (desktop)
             if (langBtn) {
                 langBtn.addEventListener("click", () => {
                     lang = lang === "no" ? "en" : "no";
@@ -199,6 +200,16 @@
                     updateLanguage();
                 });
             }
+
+            // Språk-knapp (mobile)
+            if (mobileLangBtn) {
+                mobileLangBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
+
 
             if (langMobileBtn) {
                 langMobileBtn.addEventListener("click", () => {

@@ -12,8 +12,8 @@
     <header class="fixedHeader fade-header">
         <ul>
             <li class="dropdownProdukter">
-                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
-                    style="background:none; border:none; cursor:pointer;">
+                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'"
+                    class="headerText" style="background:none; border:none; cursor:pointer;">
                     PRODUKTER
                 </button>
                 <div class="dropdown-fullwidth-wrapper">
@@ -93,22 +93,22 @@
 
     <script src="translations.js"></script>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeMenu = document.getElementById('closeMenu');
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeMenu = document.getElementById('closeMenu');
 
-    if (hamburgerBtn && mobileMenu && closeMenu) {
-        hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.style.display = 'flex';
-        });
+            if (hamburgerBtn && mobileMenu && closeMenu) {
+                hamburgerBtn.addEventListener('click', () => {
+                    mobileMenu.style.display = 'flex';
+                });
 
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.style.display = 'none';
+                closeMenu.addEventListener('click', () => {
+                    mobileMenu.style.display = 'none';
+                });
+            }
         });
-    }
-});
-</script>
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -188,6 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Språk-knapp
+            // Språk-knapp (desktop)
             if (langBtn) {
                 langBtn.addEventListener("click", () => {
                     lang = lang === "no" ? "en" : "no";
@@ -195,6 +196,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     updateLanguage();
                 });
             }
+
+            // Språk-knapp (mobile)
+            if (mobileLangBtn) {
+                mobileLangBtn.addEventListener("click", () => {
+                    lang = lang === "no" ? "en" : "no";
+                    localStorage.setItem("lang", lang);
+                    updateLanguage();
+                });
+            }
+
 
             // Første gang
             updateLanguage();

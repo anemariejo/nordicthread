@@ -12,8 +12,8 @@
     <header class="fixedHeader fade-header">
         <ul>
             <li class="dropdownProdukter">
-                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'" class="headerText"
-                    style="background:none; border:none; cursor:pointer;">
+                <button id="produkterTekst" onclick="window.location.href='index.html?scroll=produktSection'"
+                    class="headerText" style="background:none; border:none; cursor:pointer;">
                     PRODUKTER
                 </button>
                 <div class="dropdown-fullwidth-wrapper">
@@ -119,16 +119,16 @@
             if (dropdownBtn) dropdownBtn.textContent = translations[lang].produkter;
 
             // Dropdown meny (desktop)
-                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
+            document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
 
-                const bluserLink = document.getElementById("linkBluser");
-                if (bluserLink) bluserLink.textContent = translations[lang].bluser;
+            const bluserLink = document.getElementById("linkBluser");
+            if (bluserLink) bluserLink.textContent = translations[lang].bluser;
 
-                const skjerfLink = document.getElementById("linkSkjerf");
-                if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
+            const skjerfLink = document.getElementById("linkSkjerf");
+            if (skjerfLink) skjerfLink.textContent = translations[lang].skjerf;
 
-                const secondThreadLink = document.getElementById("linkSecondThread");
-                if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
+            const secondThreadLink = document.getElementById("linkSecondThread");
+            if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
             // Om oss lenke (desktop)
             const omOssHjorne = document.getElementById('omOssHjorne');
@@ -139,13 +139,13 @@
             if (produkterBtn) produkterBtn.textContent = translations[lang].produkterText;
 
             // Mobilmeny
-                const mobileProdukter = document.getElementById("mobileProdukter");
-                const mobileOmOss = document.getElementById("mobileOmOss");
-                const mobileLangBtn = document.getElementById("langMobileBtn");
+            const mobileProdukter = document.getElementById("mobileProdukter");
+            const mobileOmOss = document.getElementById("mobileOmOss");
+            const mobileLangBtn = document.getElementById("langMobileBtn");
 
-                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
-                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
-                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
+            if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
+            if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
+            if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
             // Oppdater språkknapper
             if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
@@ -153,6 +153,7 @@
         }
 
         // Event listeners for begge knapper
+        // Språk-knapp (desktop)
         if (langBtn) {
             langBtn.addEventListener("click", () => {
                 lang = lang === "no" ? "en" : "no";
@@ -160,6 +161,16 @@
                 updateLanguage();
             });
         }
+
+        // Språk-knapp (mobile)
+        if (mobileLangBtn) {
+            mobileLangBtn.addEventListener("click", () => {
+                lang = lang === "no" ? "en" : "no";
+                localStorage.setItem("lang", lang);
+                updateLanguage();
+            });
+        }
+
 
         if (langMobileBtn) {
             langMobileBtn.addEventListener("click", () => {
