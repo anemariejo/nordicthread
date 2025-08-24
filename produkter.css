@@ -376,7 +376,7 @@ body {
     /* Container for produkter */
     .ProdukterBilder {
         display: flex;
-        flex-direction: row; /* stack horizontally */
+        flex-direction: column; /* stack vertically */
         align-items: center;
         width: 100%;
         height: auto;           /* let container grow */
@@ -385,7 +385,7 @@ body {
     }
 
     .produkt {
-        width: 90%;             /* almost full width */
+        width: 100%;             /* almost full width */
         height: auto;           /* adjust height to image */
         margin-bottom: 1em;     /* spacing between products */
         position: relative;
