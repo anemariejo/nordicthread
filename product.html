@@ -164,6 +164,15 @@
                 document.getElementById('omOssHjorne').innerHTML = translations[lang].omOssHjorne;
                 document.getElementById('logoText').textContent = translations[lang].logoText;
 
+                // Mobilmeny
+                const mobileProdukter = document.getElementById("mobileProdukter");
+                const mobileOmOss = document.getElementById("mobileOmOss");
+                const mobileLangBtn = document.getElementById("langMobileBtn");
+
+                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
+                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
+                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
+
                 langBtn.textContent = lang === "no" ? "EN" : "NO";
 
                 if (window.currentProduct) {

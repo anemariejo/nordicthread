@@ -154,8 +154,11 @@
                 // Mobilmeny
                 const mobileProdukter = document.getElementById("mobileProdukter");
                 const mobileOmOss = document.getElementById("mobileOmOss");
+                const mobileLangBtn = document.getElementById("langMobileBtn");
+
                 if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
                 if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
+                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
                 // Oppdater språkknapper
                 if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";

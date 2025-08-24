@@ -166,6 +166,15 @@
                 const typeProduktDesc = document.querySelector('.typeProdukt p');
                 if (typeProduktDesc) typeProduktDesc.innerHTML = translations[lang].typeProduktDesc;
 
+                // Mobilmeny
+                const mobileProdukter = document.getElementById("mobileProdukter");
+                const mobileOmOss = document.getElementById("mobileOmOss");
+                const mobileLangBtn = document.getElementById("langMobileBtn");
+
+                if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
+                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
+                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
+
                 // Oppdater språk-knapp
                 if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
 
