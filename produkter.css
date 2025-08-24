@@ -315,7 +315,7 @@ body {
         flex-direction: column; /* én og én vertikalt */
         gap: 2em;
         padding: 1em;
-        width: 100%;
+        width: 90%;
     }
 
     .produkter {
