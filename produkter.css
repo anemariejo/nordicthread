@@ -227,7 +227,7 @@ body {
     }
 
     .omOssText {
-        padding: 0 15%;
+        padding: 0;
     }
     .product-flex {
         flex-direction: column;
@@ -390,7 +390,7 @@ body {
     }
 
     .omOssText {
-        padding: 0 5%;
+        padding: 0;
     }
     .omOssImage h1 {
     font-size: 2rem;
