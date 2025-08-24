@@ -120,21 +120,23 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Default language
             let lang = localStorage.getItem("lang") || "no";
 
             const langBtn = document.getElementById("langBtn");
-            const langMobileBtn = document.getElementById("langMobileBtn"); // mobil knapp
+            const langMobileBtn = document.getElementById("langMobileBtn");
+            const footerText = document.getElementById("footerText");
 
             function updateLanguage() {
-                // Footer tekst
-                const footerText = document.getElementById('footerText');
-                if (footerText) footerText.innerHTML = translations[lang].footerText;
-                // Dropdown meny (desktop)
+                // Update footer
+                if (footerText) footerText.textContent = translations[lang].footerText;
+
+                // Update language buttons
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
+                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
+
+                // Update other elements
                 const dropdownBtn = document.querySelector(".dropdownProdukter button");
                 if (dropdownBtn) dropdownBtn.textContent = translations[lang].produkter;
-                // Dropdown meny (desktop)
-                document.querySelector(".dropdownProdukter button").textContent = translations[lang].produkter;
 
                 const bluserLink = document.getElementById("linkBluser");
                 if (bluserLink) bluserLink.textContent = translations[lang].bluser;
@@ -145,7 +147,6 @@
                 const secondThreadLink = document.getElementById("linkSecondThread");
                 if (secondThreadLink) secondThreadLink.textContent = translations[lang].secondThread;
 
-                // Om oss tekster
                 const omOssText = document.getElementById("omOssText");
                 if (omOssText) omOssText.innerHTML = translations[lang].omOssTekst;
 
@@ -155,22 +156,14 @@
                 const omOssHjorne = document.getElementById("omOssHjorne");
                 if (omOssHjorne) omOssHjorne.textContent = translations[lang].omOssLenke;
 
-                // Mobilmeny
                 const mobileProdukter = document.getElementById("mobileProdukter");
-                const mobileOmOss = document.getElementById("mobileOmOss");
-                const mobileLangBtn = document.getElementById("langMobileBtn");
-
                 if (mobileProdukter) mobileProdukter.textContent = translations[lang].produkter;
-                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
-                if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
 
-                // Oppdater språkknapper
-                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
-                if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
+                const mobileOmOss = document.getElementById("mobileOmOss");
+                if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssLenke;
             }
 
-            // Event listeners for begge knapper
-            // Språk-knapp (desktop)
+            // Event listeners
             if (langBtn) {
                 langBtn.addEventListener("click", () => {
                     lang = lang === "no" ? "en" : "no";
@@ -187,7 +180,7 @@
                 });
             }
 
-            // Initialize text
+            // Initialize
             updateLanguage();
         });
     </script>
@@ -218,34 +211,5 @@
         </a>
     </div>
 </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Default language
-        let lang = localStorage.getItem("lang") || "no";
-
-        const langBtn = document.getElementById("langBtn");
-
-        // Function to update all text
-        function updateLanguage() {
-            document.getElementById('footerText').innerHTML = translations[lang].footerText;
-
-            // Language toggle button
-            const langBtn = document.getElementById("langBtn");
-            langBtn.textContent = lang === "no" ? "EN" : "NO";
-        }
-
-        // Switch language on button click
-        langBtn.addEventListener("click", () => {
-            lang = lang === "no" ? "en" : "no";
-            localStorage.setItem("lang", lang); // remember choice
-            updateLanguage();
-        });
-
-        // Initialize text
-        updateLanguage();
-    });
-
-</script>
 
 </html>
