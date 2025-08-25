@@ -235,13 +235,14 @@ body {
 @media (max-width: 1023px) {
 
     .produkter {
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 50px;
-    row-gap: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    justify-items: center; /* ⬅️ center grid items */
-  }
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 50px;
+        row-gap: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-items: center;
+        /* ⬅️ center grid items */
+    }
 
     .omOssText {
         padding-left: 40px;
@@ -266,19 +267,21 @@ body {
 
     /* Hver bluse */
     .bluse {
-    width: 80%; /* ⬅️ keep product narrower than screen */
-    max-width: 400px; /* optional: set a max size */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+        width: 80%;
+        /* ⬅️ keep product narrower than screen */
+        max-width: 400px;
+        /* optional: set a max size */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     /* Bilder fyller bredde */
     .bluse img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
     /* Container for produkter */
     .ProdukterBilder {
@@ -361,7 +364,18 @@ body {
         width: 100%;
         height: auto;
     }
-     /* TypeProdukt tekst større */
+
+    .stBluse {
+        width: 80%;
+        /* ⬅️ keep product narrower than screen */
+        max-width: 400px;
+        /* optional: set a max size */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* TypeProdukt tekst større */
     .typeProdukt h1 {
         padding-top: 10px;
         font-size: 2em;
@@ -379,6 +393,7 @@ body {
         /* større navn */
         margin: 0.2em 0;
     }
+
     .bildetekst p {
         font-size: 1em;
         /* større pris */
@@ -441,14 +456,19 @@ body {
     }
 
     .produkt {
-    display: flex;
-    flex-direction: column;  /* stack image above text */
-    align-items: center;     /* center horizontally */
-    text-align: center;      /* center text */
-    width: 100%;             /* full width on mobile */
-    max-width: 200px;        /* optional: limit width to force wrap */
-    margin-bottom: 1em;
-}
+        display: flex;
+        flex-direction: column;
+        /* stack image above text */
+        align-items: center;
+        /* center horizontally */
+        text-align: center;
+        /* center text */
+        width: 100%;
+        /* full width on mobile */
+        max-width: 200px;
+        /* optional: limit width to force wrap */
+        margin-bottom: 1em;
+    }
 
     .produkt img {
         width: 100%;
@@ -507,12 +527,14 @@ body {
 
     /* Tekst under bildet */
     .bildeTekst {
-    white-space: normal;      /* allow wrapping */
-    word-break: break-word;   /* break long words if necessary */
-    overflow-wrap: break-word;
-    margin-top: 0.5em;
-    font-size: 1em;
-}
+        white-space: normal;
+        /* allow wrapping */
+        word-break: break-word;
+        /* break long words if necessary */
+        overflow-wrap: break-word;
+        margin-top: 0.5em;
+        font-size: 1em;
+    }
 
     .bildeTekst p {
         margin: 0;
