@@ -371,7 +371,7 @@ body {
         max-width: 800px;
         /* optional: set a max size */
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 
@@ -402,7 +402,7 @@ body {
     /* Container for produkter */
     #produkterContainer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         /* én og én vertikalt */
         gap: 2em;
         padding: 1em;
