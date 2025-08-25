@@ -627,7 +627,6 @@ body {
     gap: 1rem;
     width: 100%;
     height: auto; /* let content determine height */
-    padding: 1rem;
     padding-left: 10px;
     padding-right: 10px;
   }
