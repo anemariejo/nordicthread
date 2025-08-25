@@ -655,6 +655,36 @@ a {
 
   }
 
+  .image-carousel {
+    display: flex;           /* enable flexbox */
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically if needed */
+    width: 100%;
+    overflow: hidden;        /* hide overflow if image slightly bigger */
+  }
+
+   #carouselImage {
+    max-width: 90%;  /* don’t exceed 90% of viewport */
+    height: auto;    /* keep aspect ratio */
+    display: block;
+    margin: 0 auto;  /* fallback centering */
+  }
+
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .carousel-controls button {
+    pointer-events: auto;
+  }
+
   /* Instagram link centered and spaced nicely */
   #instagramLenke {
     display: block;
