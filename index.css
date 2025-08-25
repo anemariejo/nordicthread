@@ -666,19 +666,16 @@ a {
 /* Tablet & små desktop */
 @media (min-width: 769px) and (max-width: 1023px) {
   .image-carousel {
-    margin: 0 auto;           /* midtstill selve karusellen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   #carouselImage {
-    max-width: 700px;
-    /* maks bredde på bilde */
-    flex: 1 1 50%;
-    /* fleksibel, men maks 50% */
-    display: flex;
-    justify-content: center;
-    /* horisontal midt */
-    align-items: center;
-    /* vertikal midt */
+    max-width: 600px;
+    height: auto;
+    display: block;
   }
 
   .carousel-controls {
@@ -772,11 +769,14 @@ a {
     /* optional: rounded corners */
 
   }
+
+  footer {
+    margin-top: auto;
+    /* pushes footer to bottom */
+    width: 100%;
+  }
 }
 
-
-/* ------------------------------------------- */
-/* =============== FARGEPALETT =============== */
 /* ------------------------------------------- */
 /* Fjellblå:      #627D98 */
 /* Tåkegrå:       #D8D8D8 */
