@@ -359,10 +359,9 @@ body {
     }
 
     .stBluse img {
-        max-width: 300px;
-        /* or any max width you want */
         width: 100%;
         height: auto;
+        display: block;
     }
 
     .stBluse {
@@ -371,7 +370,7 @@ body {
         max-width: 600px;
         /* optional: set a max size */
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
