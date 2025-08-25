@@ -456,6 +456,9 @@ a {
 
 /* Mobile */
 @media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
 
   /* Skjul desktop-menyer */
   .dropdownProdukter,
