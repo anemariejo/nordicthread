@@ -244,7 +244,8 @@ body {
     }
 
     .omOssText {
-        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .product-flex {
@@ -360,6 +361,41 @@ body {
         /* or any max width you want */
         width: 100%;
         height: auto;
+    }
+    /* Hver bluse */
+    .bluse {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        /* valgfritt */
+        background-color: #fff;
+    }
+
+    /* Bilder fyller bredde */
+    .bluse img {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+     /* TypeProdukt tekst større */
+    .typeProdukt h1 {
+        padding-top: 10px;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    .typeProdukt p {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .bildetekst h2 {
+        font-size: 1.5em;
+        /* større navn */
+        margin: 0.2em 0;
     }
 
 
