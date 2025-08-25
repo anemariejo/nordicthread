@@ -661,13 +661,15 @@ a {
     align-items: center;     /* center vertically if needed */
     width: 100%;
     overflow: hidden;        /* hide overflow if image slightly bigger */
+    padding: 0 1em;
   }
 
    #carouselImage {
-    max-width: 100%;  /* don’t exceed 100% of viewport */
-    height: auto;    /* keep aspect ratio */
+    width: 100%;      /* make it larger */
+    max-width: 400px; /* optional cap for really large screens */
+    height: auto;    /* maintain aspect ratio */
     display: block;
-    margin: 0 auto;  /* fallback centering */
+    margin: 0 auto;
   }
 
   .carousel-controls {
