@@ -357,7 +357,7 @@ body {
     }
 
     .stBluse img {
-        max-width: 400px;
+        max-width: 300px;
         /* or any max width you want */
         width: 100%;
         height: auto;
@@ -397,8 +397,11 @@ body {
         /* større navn */
         margin: 0.2em 0;
     }
-
-
+    .bildetekst p {
+        font-size: 1em;
+        /* større pris */
+        margin: 0;
+    }
 }
 
 
