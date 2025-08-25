@@ -250,13 +250,13 @@ body {
     }
 
     .product-flex {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-        /* ✅ keep horizontal centering */
-        justify-content: center;
-        /* ✅ keep vertical centering */
-    }
+    display: flex;
+    flex-direction: column;   /* stable bilde over tekst */
+    align-items: center;      /* midtstill innhold horisontalt */
+    justify-content: center;
+    text-align: center;       /* midtstill tekst også hvis ønskelig */
+    gap: 20px;
+  }
 
     .product-image {
         display: flex;
@@ -281,12 +281,10 @@ body {
 
     /* Optional: center the text block and match width with image */
     .product-info {
-        align-items: center;
-        text-align: center;
-        max-width: 540px;
-        /* same as image max-width */
-        width: 100%;
-    }
+    width: 90%;
+    max-width: 600px;         /* gjør teksten smalere og mer lesbar */
+    text-align: left;         /* behold venstrejustert tekst inni boksen */
+  }
 
     .price {
         text-align: center;

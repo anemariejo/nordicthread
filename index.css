@@ -666,8 +666,7 @@ a {
 /* Tablet & små desktop */
 @media (min-width: 769px) and (max-width: 1023px) {
   .image-carousel {
-    width: 100%;
-    max-width: 540px;   /* tweak this to your taste (e.g. 480–600px) */
+    margin: 0 auto;           /* midtstill selve karusellen */
   }
 
   .image-carousel img {
