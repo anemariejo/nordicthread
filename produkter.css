@@ -109,6 +109,7 @@ body {
     font-family: sans-serif;
     margin-top: auto;   /* pushes footer to bottom */
     width: 100%;
+    text-align: center;
 }
 
 #footerProdukter p {
