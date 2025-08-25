@@ -625,7 +625,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* centers content vertically */
-    height: 100vh;
+    height: 100%;
     /* makes the flex container almost full height */
 }
 
