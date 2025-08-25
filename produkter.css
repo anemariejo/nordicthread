@@ -269,7 +269,7 @@ body {
     .bluse {
         width: 80%;
         /* ⬅️ keep product narrower than screen */
-        max-width: 400px;
+        max-width: 800px;
         /* optional: set a max size */
         display: flex;
         flex-direction: row;
@@ -368,7 +368,7 @@ body {
     .stBluse {
         width: 80%;
         /* ⬅️ keep product narrower than screen */
-        max-width: 400px;
+        max-width: 800px;
         /* optional: set a max size */
         display: flex;
         flex-direction: row;
