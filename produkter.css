@@ -399,15 +399,6 @@ body {
         /* større pris */
         margin: 0;
     }
-    /* Container for produkter */
-    #produkterContainer {
-        display: flex;
-        flex-direction: column;
-        /* én og én vertikalt */
-        gap: 2em;
-        padding: 1em;
-        width: 90%;
-    }
 }
 
 
