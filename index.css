@@ -457,7 +457,17 @@ a {
 /* Mobile */
 @media (max-width: 768px) {
   footer {
+    display: flex;
+    flex-direction: column;
+    /* stack items vertically */
+    justify-content: center;
+    /* center items vertically */
+    align-items: center;
+    /* center items horizontally */
     text-align: center;
+    /* center text inside items */
+    gap: 10px;
+    /* optional spacing between items */
   }
 
   /* Skjul desktop-menyer */
