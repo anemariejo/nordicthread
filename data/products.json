@@ -89,8 +89,38 @@
             }
         }
     },
-     {
+    {
         "id": "stBluse4",
+        "type": [
+            "bluse",
+            "stBluse"
+        ],
+        "name": "ReThread Bluse - Hvit relieff",
+        "description": "Håndlaget bluse i resirkulert polyester. Laget i et nydelig relieffmønster. Materialet er tykkere og holder formen godt. Laget med fokus på detaljer og bærekraft. <br> <br> Vaskes for hånd på 30°C, unngå tørketrommel, tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
+        "size": [
+            "SOLGT"
+        ],
+        "colour": "Hvit",
+        "fabric": "Resirkulert polyester",
+        "images": ["/images/SThvitMonsterNy1.png", "/images/SThvitMonsterNy2.png", "/images/SThvitMonsterNy3.png", "/images/SThvitMonsterNy4.png"],
+        "price": "1590",
+        "translations": {
+            "en": {
+                "name": "ReThread Blouse - White relief",
+                "description": "Handmade blouse in recycled polyester. Made in a beautiful relief pattern. The thicker material helps maintain its shape. Crafted with attention to detail and sustainability. <br><br> Hand wash at 30°C, do not tumble dry, dry in shade. Iron on very low heat, preferably with a cloth on top to prevent scorching. Shipping costs apply.",
+                "colour": "White",
+                "fabric": "Recycled polyester"
+            },
+            "no": {
+                "name": "ReThread Bluse - Hvit relieff",
+                "description": "Håndlaget bluse i resirkulert polyester. Laget i et nydelig relieffmønster. Materialet er tykkere og holder formen godt. Laget med fokus på detaljer og bærekraft. <br> <br> Vaskes for hånd på 30°C, unngå tørketrommel, tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
+                "colour": "Hvit",
+                "fabric": "Resirkulert polyester"
+            }
+        }
+    },
+     {
+        "id": "stBluse5",
         "type": [
             "bluse",
             "stBluse"
@@ -120,7 +150,7 @@
         }
     },
     {
-        "id": "stBluse5",
+        "id": "stBluse6",
         "type": [
             "bluse",
             "stBluse"
