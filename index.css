@@ -669,12 +669,16 @@ a {
     margin: 0 auto;           /* midtstill selve karusellen */
   }
 
-  .image-carousel img {
-    width: 100%;
-    /* fyll container */
-    height: auto;
-    /* behold proporsjoner */
-    display: block;
+  #carouselImage {
+    max-width: 700px;
+    /* maks bredde på bilde */
+    flex: 1 1 50%;
+    /* fleksibel, men maks 50% */
+    display: flex;
+    justify-content: center;
+    /* horisontal midt */
+    align-items: center;
+    /* vertikal midt */
   }
 
   .carousel-controls {
