@@ -673,6 +673,7 @@ a {
   }
 
   #carouselImage {
+    padding-top: 50px;
     max-width: 600px;
     height: auto;
     display: block;
@@ -768,12 +769,6 @@ a {
     /* space between images */
     /* optional: rounded corners */
 
-  }
-
-  footer {
-    margin-top: auto;
-    /* pushes footer to bottom */
-    width: 100%;
   }
 }
 

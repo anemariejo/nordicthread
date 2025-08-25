@@ -107,6 +107,8 @@ body {
 #footerProdukter {
     background-color: #627D98;
     font-family: sans-serif;
+    margin-top: auto;   /* pushes footer to bottom */
+    width: 100%;
 }
 
 #footerProdukter p {
