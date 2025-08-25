@@ -656,21 +656,20 @@ a {
   }
 
   .image-carousel {
-    display: flex;           /* enable flexbox */
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically if needed */
-    width: 100%;
-    overflow: hidden;        /* hide overflow if image slightly bigger */
-    padding: 0 1em;
-  }
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
    #carouselImage {
-    width: 100%;      /* make it larger */
-    max-width: 600px; /* optional cap for really large screens */
-    height: auto;    /* maintain aspect ratio */
-    display: block;
-    margin: 0 auto;
-  }
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover; /* fills container nicely without distortion */
+        display: block;
+    }
 
   .carousel-controls {
     position: absolute;

@@ -621,13 +621,13 @@ body {
     }
 
     .product-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* centers content vertically */
-    height: 100%;
-    /* makes the flex container almost full height */
-}
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        width: 100%;
+        height: auto;
+    }
 
     .product-image img {
         padding-left: 0px;
@@ -636,10 +636,11 @@ body {
     }
 
     .product-image {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        padding: 0;
     }
 
     .product-image img {
