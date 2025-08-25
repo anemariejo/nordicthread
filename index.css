@@ -457,17 +457,12 @@ a {
 /* Mobile */
 @media (max-width: 768px) {
   footer {
-    display: flex;
-    flex-direction: column;
-    /* stack items vertically */
-    justify-content: center;
-    /* center items vertically */
-    align-items: center;
-    /* center items horizontally */
-    text-align: center;
-    /* center text inside items */
-    gap: 10px;
-    /* optional spacing between items */
+    width: 100vw;
+    /* or 100% if inside a container */
+    max-width: 100%;
+    /* ensures it never exceeds screen width */
+    box-sizing: border-box;
+    /* include padding in width */
   }
 
   /* Skjul desktop-menyer */
