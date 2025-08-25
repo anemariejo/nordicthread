@@ -170,11 +170,14 @@
                 if (mobileOmOss) mobileOmOss.textContent = translations[lang].omOssHjorne;
                 if (langMobileBtn) langMobileBtn.textContent = lang === "no" ? "EN" : "NO";
                 if (mobileLangBtn) mobileLangBtn.textContent = lang === "no" ? "EN" : "NO";
+                // Oppdater språkknapper
+                if (langBtn) langBtn.textContent = lang === "no" ? "EN" : "NO";
 
                 // Product details
                 if (window.currentProduct) {
                     renderProduct(window.currentProduct, lang);
                 }
+                
             }
 
 
