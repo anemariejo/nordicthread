@@ -665,45 +665,6 @@ a {
 /* Tablet */
 /* Tablet & små desktop */
 @media (min-width: 769px) and (max-width: 1023px) {
-
-  /* Desktop */
-  .product-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* vertikal midt */
-    justify-content: center;
-    /* horisontal midt */
-    gap: 2rem;
-    /* mellom bilde og tekst */
-    padding: 2rem 0;
-    flex-wrap: wrap;
-    /* gjør at det ikke knekker på mindre skjermer */
-  }
-
-  .product-image {
-    max-width: 700px;
-    /* maks bredde på bilde */
-    flex: 1 1 50%;
-    /* fleksibel, men maks 50% */
-    display: flex;
-    justify-content: center;
-    /* horisontal midt */
-    align-items: center;
-    /* vertikal midt */
-  }
-
-  /* Actual image: centered and smaller */
-  .product-image img {
-    width: 100%;
-    height: auto;
-    max-height: 60vh;   /* smaller than desktop */
-    object-fit: contain;
-    margin: 0 auto;
-    padding: 0;         /* override the 65px desktop padding */
-    display: block;
-  }
-
   .image-carousel {
     width: 100%;
     max-width: 540px;   /* tweak this to your taste (e.g. 480–600px) */
