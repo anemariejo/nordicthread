@@ -267,12 +267,12 @@ body {
         /* ✅ center image horizontally */
         align-items: center;
         /* ✅ center image vertically */
-        width: 90%;
+        width: 80%;
     }
 
     .product-image img {
         max-width: 540px;
-        width: 100%;
+        width: 80%;
         height: auto;
         object-fit: contain;
     }
