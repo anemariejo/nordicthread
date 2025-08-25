@@ -694,13 +694,6 @@ a {
     /* gjør knappene klikkbare */
   }
 
-  .product-info {
-    width: 90%;
-    /* litt smalere enn full bredde */
-    text-align: left;
-    margin-top: 1em;
-  }
-
   /* Carousel container adjustments for mobile */
   .carousel-containerInstagram {
     display: flex;
