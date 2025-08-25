@@ -3,7 +3,8 @@
 /* ------------------------------------------- */
 @font-face {
   font-family: 'NordicThreadFont';
-  src: url('./Fonts/static/static/Inter_18pt-ExtraLight.ttf') format('truetype');  font-weight: normal;
+  src: url('./Fonts/static/static/Inter_18pt-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -16,16 +17,20 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* mørk halvtransparent svart */
-  z-index: 900; /* må være under dropdown som har z-index 1000 */
-  display: none; /* skjult som standard */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* mørk halvtransparent svart */
+  z-index: 900;
+  /* må være under dropdown som har z-index 1000 */
+  display: none;
+  /* skjult som standard */
 }
 
 
 /* ------------------------------------------- */
 /* =============== BASE ======================= */
 /* ------------------------------------------- */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -72,7 +77,8 @@ ul {
   width: 100%;
   z-index: 20;
   height: 10px;
-  background-color: white; /* optional */
+  background-color: white;
+  /* optional */
 }
 
 .fixedHeader ul {
@@ -85,7 +91,8 @@ ul {
   padding: 0 2em;
   list-style: none;
   box-sizing: border-box;
-  position: relative; /* so we can absolutely center the logo */
+  position: relative;
+  /* so we can absolutely center the logo */
 }
 
 .fixedHeader button.headerText {
@@ -137,7 +144,8 @@ ul {
   font-family: 'NordicThreadFont', sans-serif;
   font-size: 30px;
   text-decoration: none;
-  white-space: nowrap; /* prevent logo text from wrapping */
+  white-space: nowrap;
+  /* prevent logo text from wrapping */
 }
 
 .headerTitle.white-logo {
@@ -166,7 +174,8 @@ ul {
   cursor: pointer;
 }
 
-#produkterTekst { /* screen sizes */
+#produkterTekst {
+  /* screen sizes */
   background: none;
   border: none;
   font-family: inherit;
@@ -179,7 +188,8 @@ ul {
 /* Full-width wrapper that appears on hover */
 .dropdown-fullwidth-wrapper {
   position: fixed;
-  top: 35px; /* match your header height */
+  top: 35px;
+  /* match your header height */
   left: 0;
   width: 100vw;
   display: none;
@@ -199,8 +209,10 @@ ul {
   padding: 20px 30px;
   box-sizing: border-box;
   display: flex;
-  justify-content: center; /* center links horizontally */
-  flex-wrap: wrap; /* allow wrapping for tablet/mobile */
+  justify-content: center;
+  /* center links horizontally */
+  flex-wrap: wrap;
+  /* allow wrapping for tablet/mobile */
 }
 
 .dropdown-content a {
@@ -221,11 +233,15 @@ ul {
 
 /* Invisible hover bridge so you can move from the button to the menu */
 .dropdown-hover-area {
-  height: 10px; /* small invisible gap */
+  height: 10px;
+  /* small invisible gap */
   background: transparent;
 }
 
-#logoText, #produkterTekst, #omOssTekst, #stylingLogo {
+#logoText,
+#produkterTekst,
+#omOssTekst,
+#stylingLogo {
   color: black;
   transition: color 0.3s ease;
 }
@@ -234,7 +250,8 @@ ul {
 /* =============== COVER SECTION ============= */
 /* ------------------------------------------- */
 .whiteStripeBackground,
-.whiteStripeBottom { /* screen sizes */
+.whiteStripeBottom {
+  /* screen sizes */
   position: absolute;
   left: 0;
   width: 100%;
@@ -251,21 +268,24 @@ ul {
   bottom: 0;
 }
 
-.pictureCoverScreen { /* screen sizes */
+.pictureCoverScreen {
+  /* screen sizes */
   position: relative;
   width: 100vw;
   height: calc(100vh - 25px);
   overflow: hidden;
 }
 
-.klessnor { /* screen sizes */
+.klessnor {
+  /* screen sizes */
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.tekstBilde { /* screen sizes */
+.tekstBilde {
+  /* screen sizes */
   position: absolute;
   top: 70%;
   left: 2em;
@@ -273,13 +293,15 @@ ul {
   font-family: sans-serif;
 }
 
-.tekstBilde h3 { /* screen sizes */
+.tekstBilde h3 {
+  /* screen sizes */
   margin-bottom: 0.2em;
   font-size: 30px;
-  
+
 }
 
-.tekstBilde p { /* screen sizes */
+.tekstBilde p {
+  /* screen sizes */
   font-size: 18px;
   text-shadow: 1px 1px 2px #949494;
 }
@@ -287,7 +309,8 @@ ul {
 /* ------------------------------------------- */
 /* =============== PRODUKTER ================== */
 /* ------------------------------------------- */
-.ProdukterBilder { /* screen sizes */
+.ProdukterBilder {
+  /* screen sizes */
   display: flex;
   justify-content: space-around;
   width: 100vw;
@@ -297,7 +320,8 @@ ul {
   cursor: pointer;
 }
 
-.produkt { /* screen sizes */
+.produkt {
+  /* screen sizes */
   position: relative;
   width: 35vw;
   height: 80vh;
@@ -312,13 +336,15 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.produkt:hover img { /* screen sizes */
+.produkt:hover img {
+  /* screen sizes */
   transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 
-.bildeTekst { /* screen sizes */
+.bildeTekst {
+  /* screen sizes */
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -358,7 +384,7 @@ ul {
 }
 
 .carousel-controls button {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 20px 25px;
@@ -392,111 +418,123 @@ footer li {
 a {
   color: inherit;
 }
- /* Instagram link centered and spaced nicely */
-  #instagramLenke {
-    display: block;
-    margin-top: 1em;
-    font-size: 1.1em;
-    text-align: center;
-    color: #627D98; /* use your palette color */
+
+/* Instagram link centered and spaced nicely */
+#instagramLenke {
+  display: block;
+  margin-top: 1em;
+  font-size: 1.1em;
+  text-align: center;
+  color: #627D98;
+  /* use your palette color */
+}
+
+
+
+/* Sikre at logo er midt */
+.fixedHeader li:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Desktop */
+/* Desktop: vis original menyer, skjul hamburger */
+@media (min-width: 769px) {
+
+  .hamburger,
+  .mobile-menu {
+    display: none !important;
   }
 
-
-
-    /* Sikre at logo er midt */
-    .fixedHeader li:nth-child(2) {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Desktop */  
-    /* Desktop: vis original menyer, skjul hamburger */
-@media (min-width: 769px) {
-    .hamburger,
-    .mobile-menu {
-        display: none !important;
-    }
-
-    .dropdownProdukter,
-    .rightMenu {
-        display: flex !important;
-    }
+  .dropdownProdukter,
+  .rightMenu {
+    display: flex !important;
+  }
 }
 
 
 /* Mobile */
 @media (max-width: 768px) {
+
   /* Skjul desktop-menyer */
-    .dropdownProdukter,
-    .rightMenu {
-        display: none !important;
-    }
+  .dropdownProdukter,
+  .rightMenu {
+    display: none !important;
+  }
 
-    /* Vis hamburger */
-    .hamburger {
-        display: block;
-        font-size: 28px;
-        cursor: pointer;
-        position: absolute;
-        right: 1em;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  /* Vis hamburger */
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    .fixedHeader li:nth-child(2) {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  .fixedHeader li:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    /* Mobile menu overlay */
-    .mobile-menu {
-        display: none; /* starter skjult */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: white;
-        z-index: 10000;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  /* Mobile menu overlay */
+  .mobile-menu {
+    display: none;
+    /* starter skjult */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 10000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .mobile-menu a {
-        font-size: 24px; /* større tekst */
-        margin: 1em 0;
-        text-decoration: none;
-        color: black;
-    }
+  .mobile-menu a {
+    font-size: 24px;
+    /* større tekst */
+    margin: 1em 0;
+    text-decoration: none;
+    color: black;
+  }
 
-    #closeMenu {
-        position: absolute;
-        top: 1em;
-        right: 1em;
-        font-size: 36px;
-        cursor: pointer;
-    }
+  #closeMenu {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
   .fixedHeader ul {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* spread left, center, right */
+    justify-content: space-between;
+    /* spread left, center, right */
     padding: 0 1em;
   }
 
   .fixedHeader li {
-    flex: unset; /* remove equal stretching from desktop */
-    text-align: initial; /* remove forced centering */
+    flex: unset;
+    /* remove equal stretching from desktop */
+    text-align: initial;
+    /* remove forced centering */
   }
 
   .fixedHeader li:first-child {
-    margin-right: auto; /* push to far left */
+    margin-right: auto;
+    /* push to far left */
   }
 
   .fixedHeader li:last-child {
-    margin-left: auto; /* push to far right */
+    margin-left: auto;
+    /* push to far right */
   }
 
   /* Absolutely center the logo so left/right don't affect it */
@@ -507,79 +545,104 @@ a {
   }
 
   /* Produkter vises en og en */
-    #produkterContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5em;
-        padding: 1em;
-    }
+  #produkterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1em;
+  }
 
   .tekstBilde {
-    top: 50%; /* flyttet lenger opp */
-    left: 1em; /* juster gjerne litt inn fra venstre */
-    font-size: 1em; /* kan justeres om teksten blir for stor */
+    top: 50%;
+    /* flyttet lenger opp */
+    left: 1em;
+    /* juster gjerne litt inn fra venstre */
+    font-size: 1em;
+    /* kan justeres om teksten blir for stor */
   }
 
   .tekstBilde h3 {
-    font-size: 24px; /* mindre overskrift på mobil */
+    font-size: 24px;
+    /* mindre overskrift på mobil */
   }
 
   .tekstBilde p {
-    font-size: 16px; /* mindre tekst på mobil */
+    font-size: 16px;
+    /* mindre tekst på mobil */
   }
-  
+
   /* Carousel container adjustments for mobile */
   .carousel-containerInstagram {
     display: flex;
-    flex-direction: column; /* stack items vertically if needed */
-    align-items: center;    /* center content horizontally */
-    width: 90vw;            /* container almost full width on mobile */
-    height: auto;           /* height adjusts based on content */
+    flex-direction: column;
+    /* stack items vertically if needed */
+    align-items: center;
+    /* center content horizontally */
+    width: 90vw;
+    /* container almost full width on mobile */
+    height: auto;
+    /* height adjusts based on content */
     overflow: hidden;
-    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    margin: 0 auto 1.5em;
+    /* centered with some bottom margin */
     padding-top: 20px;
   }
 
   .carouselInstagram {
     display: flex;
-    flex-direction: row;    /* keep images horizontal carousel */
-    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    flex-direction: row;
+    /* keep images horizontal carousel */
+    overflow-x: auto;
+    /* allow horizontal scroll if images don't fit */
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on iOS */
     width: 100%;
     padding-top: 30px;
   }
 
-    /* Carousel container adjustments for mobile */
+  /* Carousel container adjustments for mobile */
   .carousel-container {
     display: flex;
-    flex-direction: column; /* stack items vertically if needed */
-    align-items: center;    /* center content horizontally */
-    width: 90vw;            /* container almost full width on mobile */
-    height: auto;           /* height adjusts based on content */
+    flex-direction: column;
+    /* stack items vertically if needed */
+    align-items: center;
+    /* center content horizontally */
+    width: 90vw;
+    /* container almost full width on mobile */
+    height: auto;
+    /* height adjusts based on content */
     overflow: hidden;
-    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    margin: 0 auto 1.5em;
+    /* centered with some bottom margin */
     padding-top: 20px;
   }
 
   .carousel {
     display: flex;
-    flex-direction: row;    /* keep images horizontal carousel */
-    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    flex-direction: row;
+    /* keep images horizontal carousel */
+    overflow-x: auto;
+    /* allow horizontal scroll if images don't fit */
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on iOS */
     width: 100%;
     padding-top: 30px;
   }
 
   .carousel-image {
-    flex: 0 0 auto;         /* don't shrink, fixed width */
-    width: 60vw;            /* images fill most of viewport width */
-    height: auto;           /* keep aspect ratio */
+    flex: 0 0 auto;
+    /* don't shrink, fixed width */
+    width: 60vw;
+    /* images fill most of viewport width */
+    height: auto;
+    /* keep aspect ratio */
     object-fit: cover;
     scroll-snap-align: start;
-    margin-right: 1em;      /* space between images */
-       /* optional: rounded corners */
+    margin-right: 1em;
+    /* space between images */
+    /* optional: rounded corners */
 
   }
 
@@ -589,7 +652,8 @@ a {
     margin-top: 1em;
     font-size: 1.1em;
     text-align: center;
-    color: #627D98; /* use your palette color */
+    color: #627D98;
+    /* use your palette color */
   }
 
   .dropdown-content {
@@ -601,109 +665,154 @@ a {
 /* Tablet */
 /* Tablet & små desktop */
 @media (min-width: 769px) and (max-width: 1023px) {
-    /* Desktop */
-.product-flex {
+
+  /* Desktop */
+  .product-flex {
     display: flex;
     flex-direction: column;
-    align-items: center;       /* vertikal midt */
-    justify-content: center;   /* horisontal midt */
-    gap: 2rem;                 /* mellom bilde og tekst */
+    align-items: center;
+    /* vertikal midt */
+    justify-content: center;
+    /* horisontal midt */
+    gap: 2rem;
+    /* mellom bilde og tekst */
     padding: 2rem 0;
-    flex-wrap: wrap;           /* gjør at det ikke knekker på mindre skjermer */
-}
+    flex-wrap: wrap;
+    /* gjør at det ikke knekker på mindre skjermer */
+  }
 
-.product-image {
-    max-width: 700px;          /* maks bredde på bilde */
-    flex: 1 1 50%;             /* fleksibel, men maks 50% */
+  .product-image {
+    max-width: 700px;
+    /* maks bredde på bilde */
+    flex: 1 1 50%;
+    /* fleksibel, men maks 50% */
     display: flex;
-    justify-content: center;   /* horisontal midt */
-    align-items: center;       /* vertikal midt */
-}
+    justify-content: center;
+    /* horisontal midt */
+    align-items: center;
+    /* vertikal midt */
+  }
 
-.product-image img {
-    width: 100%;               /* fyll max-width */
-    height: auto;              /* behold proporsjoner */
+  /* Actual image: centered and smaller */
+  .product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;   /* smaller than desktop */
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 0;         /* override the 65px desktop padding */
     display: block;
-}
+  }
 
+  .image-carousel {
+    width: 100%;
+    max-width: 540px;   /* tweak this to your taste (e.g. 480–600px) */
+  }
 
-    .image-carousel img {
-        width: 100%;                 /* fyll container */
-        height: auto;                /* behold proporsjoner */
-        display: block;
-    }
+  .image-carousel img {
+    width: 100%;
+    /* fyll container */
+    height: auto;
+    /* behold proporsjoner */
+    display: block;
+  }
 
-    .carousel-controls {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        align-items: center; 
-        justify-content: space-between;
-        transform: translateY(-50%);
-        pointer-events: none; /* lar knappene fortsatt være klikkbare selv om bildet skaleres */
-    }
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* lar knappene fortsatt være klikkbare selv om bildet skaleres */
+  }
 
-    .carousel-controls button {
-        pointer-events: auto; /* gjør knappene klikkbare */
-    }
+  .carousel-controls button {
+    pointer-events: auto;
+    /* gjør knappene klikkbare */
+  }
 
-    .product-info {
-        width: 90%;                  /* litt smalere enn full bredde */
-        text-align: left;
-        margin-top: 1em;
-    }
-      /* Carousel container adjustments for mobile */
+  .product-info {
+    width: 90%;
+    /* litt smalere enn full bredde */
+    text-align: left;
+    margin-top: 1em;
+  }
+
+  /* Carousel container adjustments for mobile */
   .carousel-containerInstagram {
     display: flex;
-    flex-direction: column; /* stack items vertically if needed */
-    align-items: center;    /* center content horizontally */
-    width: 90vw;            /* container almost full width on mobile */
-    height: auto;           /* height adjusts based on content */
+    flex-direction: column;
+    /* stack items vertically if needed */
+    align-items: center;
+    /* center content horizontally */
+    width: 90vw;
+    /* container almost full width on mobile */
+    height: auto;
+    /* height adjusts based on content */
     overflow: hidden;
-    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    margin: 0 auto 1.5em;
+    /* centered with some bottom margin */
     padding-top: 20px;
   }
 
   .carouselInstagram {
     display: flex;
-    flex-direction: row;    /* keep images horizontal carousel */
-    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    flex-direction: row;
+    /* keep images horizontal carousel */
+    overflow-x: auto;
+    /* allow horizontal scroll if images don't fit */
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on iOS */
     width: 100%;
     padding-top: 30px;
   }
 
-    /* Carousel container adjustments for mobile */
+  /* Carousel container adjustments for mobile */
   .carousel-container {
     display: flex;
-    flex-direction: column; /* stack items vertically if needed */
-    align-items: center;    /* center content horizontally */
-    width: 70vw;            /* container almost full width on mobile */
-    height: auto;           /* height adjusts based on content */
+    flex-direction: column;
+    /* stack items vertically if needed */
+    align-items: center;
+    /* center content horizontally */
+    width: 70vw;
+    /* container almost full width on mobile */
+    height: auto;
+    /* height adjusts based on content */
     overflow: hidden;
-    margin: 0 auto 1.5em;   /* centered with some bottom margin */
+    margin: 0 auto 1.5em;
+    /* centered with some bottom margin */
     padding-top: 20px;
   }
-    .carousel {
+
+  .carousel {
     display: flex;
-    flex-direction: row;    /* keep images horizontal carousel */
-    overflow-x: auto;       /* allow horizontal scroll if images don't fit */
+    flex-direction: row;
+    /* keep images horizontal carousel */
+    overflow-x: auto;
+    /* allow horizontal scroll if images don't fit */
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scrolling on iOS */
     width: 100%;
     padding-top: 30px;
   }
 
   .carousel-image {
-    flex: 0 0 auto;         /* don't shrink, fixed width */
-    width: 40vw;            /* images fill most of viewport width */
-    height: auto;           /* keep aspect ratio */
+    flex: 0 0 auto;
+    /* don't shrink, fixed width */
+    width: 40vw;
+    /* images fill most of viewport width */
+    height: auto;
+    /* keep aspect ratio */
     object-fit: cover;
     scroll-snap-align: start;
-    margin-right: 1em;      /* space between images */
-       /* optional: rounded corners */
+    margin-right: 1em;
+    /* space between images */
+    /* optional: rounded corners */
 
   }
 }

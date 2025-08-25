@@ -261,6 +261,15 @@ body {
         padding-top: 0;
     }
 
+    /* Optional: center the text block and match width with image */
+    .product-info {
+        align-items: center;
+        text-align: center;
+        max-width: 540px;
+        /* same as image max-width */
+        width: 100%;
+    }
+
     .price {
         text-align: center;
     }
