@@ -666,7 +666,6 @@ a {
 /* Tablet & små desktop */
 @media (min-width: 769px) and (max-width: 1023px) {
   .image-carousel {
-    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;

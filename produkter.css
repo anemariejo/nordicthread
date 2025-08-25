@@ -261,6 +261,7 @@ body {
   }
 
     .product-image {
+        padding-top: 200px;
         display: flex;
         justify-content: center;
         /* ✅ center image horizontally */
