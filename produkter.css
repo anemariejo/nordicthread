@@ -467,6 +467,24 @@ body {
         align-items: center;
     }
 
+    /* Hver bluse */
+    .stBluse {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        /* valgfritt */
+        background-color: #fff;
+    }
+
+    /* Bilder fyller bredde */
+    .stBluse img {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
     /* Container for produkter */
     .ProdukterBilder {
         display: flex;
@@ -573,13 +591,6 @@ body {
         font-size: 1em;
         /* større pris */
         margin: 0;
-    }
-
-    .stBluse img {
-        max-width: 400px;
-        /* or any max width you want */
-        width: 100%;
-        height: auto;
     }
 
     .omOssText {
