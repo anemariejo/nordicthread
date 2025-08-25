@@ -664,7 +664,7 @@ a {
   }
 
    #carouselImage {
-    max-width: 90%;  /* don’t exceed 90% of viewport */
+    max-width: 100%;  /* don’t exceed 100% of viewport */
     height: auto;    /* keep aspect ratio */
     display: block;
     margin: 0 auto;  /* fallback centering */
