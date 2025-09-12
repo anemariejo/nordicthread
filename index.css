@@ -3,9 +3,7 @@
 /* ------------------------------------------- */
 @font-face {
   font-family: 'NordicThreadFont';
-  src: url('./Fonts/static/static/Inter_18pt-ExtraLight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('./Fonts/Raleway/static/Raleway-Regular.ttf') format('truetype');
 }
 
 /* ------------------------------------------- */
@@ -145,6 +143,7 @@ ul {
   font-size: 30px;
   text-decoration: none;
   white-space: nowrap;
+  text-transform: uppercase;
   /* prevent logo text from wrapping */
 }
 

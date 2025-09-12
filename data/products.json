@@ -11,7 +11,7 @@
             "M"
         ],
         "colour": "Hvit",
-        "fabric": "Resirkulert polyester",
+        "fabric": ["Polyester", "Bomull"],
         "images": ["/images/kremMonster1.png", "/images/kremMonster2.png", "/images/kremMonster3.png"],
         "price": "1590",
         "translations": {
@@ -41,7 +41,7 @@
             "S"
         ],
         "colour": "Sand",
-        "fabric": "Resirkulert polyester",
+        "fabric": "Polyester",
         "images": ["/images/gyllenBlomst1.png", "/images/gyllenBlomst2.png", "/images/gyllenBlomst3.png"],
         "price": "1590",
         "translations": {
@@ -71,7 +71,7 @@
             "S"
         ],
         "colour": "Lilla",
-        "fabric": "Resirkulert polyester",
+        "fabric": "Polyester",
         "images": ["/images/STbluseLilla2.png", "/images/STlilla1.png"],
         "price": "1590",
         "translations": {
@@ -101,7 +101,7 @@
             "S"
         ],
         "colour": "Champagne",
-        "fabric": "Resirkulert polyester",
+        "fabric": "Polyester",
         "images": ["/images/STblusePleddChamp.png", "/images/STchamp5.png"],
         "price": "1590",
         "translations": {
@@ -125,13 +125,73 @@
             "bluse",
             "stBluse"
         ],
+        "name": "ReThread Bluse - Hvit frost",
+        "description": "Håndlaget i bærekraftig, gjenbrukt materiale. Myk og behagelig med skinnende finish. Materialet er tykkere og holder formen godt. Laget med fokus på detaljer og bærekraft. <br> <br> Anbefalt å vaske for hånd på 30°C, eventuelt skånevask på 40°C med lav sentrifugering i vaskepose. Unngå tørketrommel og tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
+        "size": [
+            "XS"
+        ],
+        "colour": "Hvit",
+        "fabric": "Polyester",
+        "images": ["/images/XShvitST1.png", "/images/XShvitST2.png", "/images/XShvitST3.png"],
+        "price": "1590",
+        "translations": {
+            "en": {
+                "name": "ReThread Blouse - White frost",
+                "description": "Handmade blouse made from recycled materials. Soft and comfortable with a shiny finish. The thicker material helps maintain its shape. Crafted with attention to detail and sustainability. <br><br> Recommended to hand wash at 30°C, or delicate wash at 40°C with low spin cycle in a laundry bag. Do not tumble dry and dry in shade. Iron on very low heat, preferably with a cloth on top to prevent scorching. Shipping costs apply.",
+                "colour": "White",
+                "fabric": ["Resycled material (not confirmed)"]
+            },
+            "no": {
+                "name": "ReThread Bluse - Hvit frost",
+                "description": "Håndlaget i bærekraftig, gjenbrukt materiale. Myk og behagelig med skinnende finish. Materialet er tykkere og holder formen godt. Laget med fokus på detaljer og bærekraft. <br> <br> Anbefalt å vaske for hånd på 30°C, eventuelt skånevask på 40°C med lav sentrifugering i vaskepose. Unngå tørketrommel og tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
+                "colour": "Hvit",
+                "fabric": ["Gjenbrukt materiale (ikke bekreftet)"]
+            }
+        }
+    },
+    {
+        "id": "stBluse6",
+        "type": [
+            "bluse",
+            "stBluse"
+        ],
+        "name": "ReThread Bluse - Gyldne striper",
+        "description": "Håndlaget bluse i resirkulert polyester. Myk og behagelig med skinnende finish. Laget med fokus på detaljer og bærekraft. <br> <br> Anbefalt å vaske for hånd på 30°C, eventuelt skånevask på 40°C med lav sentrifugering i vaskepose. Unngå tørketrommel og tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
+        "size": [
+            "M"
+        ],
+        "colour": "Gull",
+        "fabric": "Polyester",
+        "images": ["/images/LysGullST1.png", "/images/LysGullST2.png", "/images/LysGullST3.png", "/images/LysGullST4.png", "/images/LysGullST5.png"],
+        "price": "1590",
+        "translations": {
+            "en": {
+                "name": "ReThread Blouse - Golden stripes",
+                "description": "Handmade blouse in recycled polyester. Soft and comfortable with a shiny finish. Crafted with attention to detail and sustainability. <br><br> Recommended to hand wash at 30°C, or delicate wash at 40°C with low spin cycle in a laundry bag. Do not tumble dry and dry in shade. Iron on very low heat, preferably with a cloth on top to prevent scorching. Shipping costs apply.",
+                "colour": "Gold",
+                "fabric": ["Polyester"]
+            },
+            "no": {
+                "name": "ReThread Bluse - Gyldne striper",
+                "description": "Håndlaget bluse i resirkulert polyester. Myk og behagelig med skinnende finish. Laget med fokus på detaljer og bærekraft. <br> <br> Anbefalt å vaske for hånd på 30°C, eventuelt skånevask på 40°C med lav sentrifugering i vaskepose. Unngå tørketrommel og tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
+                "colour": "Gull",
+                "fabric": ["Polyester"]
+            }
+        }
+    },
+    {
+        "id": "stBluse7",
+        "type": [
+            "bluse",
+            "stBluse"
+        ],
         "name": "ReThread Bluse - Rosa med blomster",
         "description": "Håndlaget bluse i resirkulert bomull og polyester. Myk og behagelig med skinnende finish. Materialet er tykkere og holder formen godt. Laget med fokus på detaljer og bærekraft. <br> <br> Vaskes for hånd på 30°C, eventuelt skånevask på 40°C med lav sentrifugering i vaskepose. Unngå tørketrommel og tørk i skygge. Stryk på svært lav varme, gjerne med et håndkle over for å unngå å svi blusen. Frakt kommer utenom.",
         "size": [
             "S"
         ],
         "colour": "Rosa",
-        "fabric": "Resirkulert bomull og polyester",
+        "fabric": ["Bomull", "Polyester"],
         "images": ["/images/STbluseSloyfe.png", "/images/STrosaBl.png"],
         "price": "1590",
         "translations": {
@@ -150,7 +210,7 @@
         }
     },
     {
-        "id": "stBluse6",
+        "id": "stBluse8",
         "type": [
             "bluse",
             "stBluse"
@@ -161,7 +221,7 @@
             "S"
         ],
         "colour": "Hvit",
-        "fabric": "Resirkulert polyester",
+        "fabric": ["Polyester"],
         "images": ["/images/SThvitMonsterNy1.png", "/images/SThvitMonsterNy2.png", "/images/SThvitMonsterNy3.png", "/images/SThvitMonsterNy4.png"],
         "price": "1590",
         "translations": {
@@ -180,7 +240,7 @@
         }
     },
      {
-        "id": "stBluse7",
+        "id": "stBluse9",
         "type": [
             "bluse",
             "stBluse"
@@ -191,7 +251,7 @@
             "SOLGT"
         ],
         "colour": "Hvit",
-        "fabric": "Resirkulert polyester",
+        "fabric": "Polyester",
         "images": ["/images/SOLGTSOLD.png", "/images/SThvBl5.png"],
         "price": "1590",
         "translations": {
@@ -210,7 +270,7 @@
         }
     },
     {
-        "id": "stBluse8",
+        "id": "stBluse10",
         "type": [
             "bluse",
             "stBluse"
@@ -221,7 +281,7 @@
             "SOLGT"
         ],
         "colour": "Hvit",
-        "fabric": "Resirkulert polyester",
+        "fabric": "Polyester",
         "images": ["/images/STfuglGlitter.png", "/images/STfuglGlitter7.png"],
         "price": "1590",
         "translations": {
